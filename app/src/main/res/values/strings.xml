@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">VeGetables</string>
+    <string name="current_orders">Current Orders</string>
 </resources>
