@@ -6,70 +6,91 @@
     android:layout_height="match_parent"
     tools:context="com.mamabearindustries.vegetables.FoodInfo">
 
-    <EditText
+    <TextView
         android:id="@+id/itemName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="25dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Item Name"
+        android:layout_marginTop="106dp"
+        android:text="@string/itemName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/enterItemName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/itemName"
-        app:layout_constraintStart_toStartOf="@+id/itemName"
-        app:layout_constraintTop_toBottomOf="@+id/itemName" />
-
     <EditText
+        android:id="@+id/enterItemName"
+        android:layout_width="575dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/itemName" />
+
+    <TextView
         android:id="@+id/quantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="26dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Quantity"
+        android:layout_marginTop="43dp"
+        android:text="@string/quantity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/enterItemName" />
 
-    <TextView
-        android:id="@+id/enterQuantity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="178dp" />
-
     <EditText
-        android:id="@+id/date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/enterQuantity"
+        android:layout_width="574dp"
+        android:layout_height="36dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Expiration Date (Estimate)"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="241dp" />
+        app:layout_constraintStart_toStartOf="@+id/quantity"
+        app:layout_constraintTop_toBottomOf="@+id/quantity" />
 
     <TextView
-        android:id="@+id/enterDate"
+        android:id="@+id/expDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="294dp" />
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="47dp"
+        android:text="@string/expDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterQuantity" />
+
+    <EditText
+        android:id="@+id/enterExpDate"
+        android:layout_width="575dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/expDate"
+        app:layout_constraintTop_toBottomOf="@+id/expDate"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/addNewItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/addNewItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/addItem"
+        android:id="@+id/addItemButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add New Item"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="375dp" />
+        android:layout_marginBottom="41dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/addItemButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/enterExpDate" />
 </android.support.constraint.ConstraintLayout>
