@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">VeGetables</string>
+    <string name="current_orders">Current Orders</string>
+    <string name="pending_requests">Pending Requests</string>
+    <string name="confirmed_requests">Confirmed Requests </string>
 </resources>
