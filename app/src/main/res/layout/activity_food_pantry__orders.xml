@@ -10,36 +10,37 @@
     <TextView
         android:id="@+id/txtCurrentOrder"
         android:layout_width="159dp"
-        android:layout_height="36dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:text="@string/current_orders"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="123dp"
-        android:layout_height="25dp"
-        android:text="Request Pending"
+        android:id="@+id/txtPendingRequests"
+        android:layout_width="134dp"
+        android:layout_height="27dp"
+        android:layout_marginBottom="173dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/pending_requests"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/txtConfirmedRequests"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCurrentOrder" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCurrentOrder"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="145dp"
-        android:layout_height="27dp"
-        android:text="Request Confirmed"
+        android:id="@+id/txtConfirmedRequests"
+        android:layout_width="151dp"
+        android:layout_height="29dp"
+        android:layout_marginBottom="204dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/confirmed_requests"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>
