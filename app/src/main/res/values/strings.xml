@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">VeGetables</string>
-    <string name="foodPantry1">Food Pantry #1:</string>
+    <string name="foodPantry1">Food Pantry Name:</string>
     <string name="item1">Item Name:</string>
     <string name="quantity1">Quantity:</string>
     <string name="date1">Date:</string>
