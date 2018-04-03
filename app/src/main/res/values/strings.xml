@@ -6,4 +6,8 @@
     <string name="date1">Date:</string>
     <string name="address1">Address:</string>
     <string name="requests">Requests</string>
+    <string name="phoneNumber1">Phone Number:</string>
+    <string name="email1">Email:</string>
+    <string name="accept1">Accept</string>
+    <string name="reject1">Reject</string>
 </resources>
