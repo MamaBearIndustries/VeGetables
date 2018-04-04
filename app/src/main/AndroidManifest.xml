@@ -25,32 +25,16 @@
 
         </activity>
 
+        <activity android:name=".FoodInfo"></activity>
 
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
       
       
         <activity android:name=".FoodPantry_Orders"></activity>
       
         <activity android:name=".Pantry_Search_Screen"></activity>
 
-      
-      
+
     </application>
 
 </manifest>
