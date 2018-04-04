@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">VeGetables</string>
+    <string name="itemName">Item Name</string>
+    <string name="quantity">Quantity</string>
+    <string name="expDate">Expiration Date (Estimate)</string>
+    <string name="addNewItem">Add New Item</string>
+    <string name="addItemButton">Add Item</string>
 </resources>
