@@ -1,3 +1,70 @@
 <resources>
     <string name="app_name">VeGetables</string>
+    <string name="foodPantry1">Food Pantry Name:</string>
+    <string name="item1">Item Name:</string>
+    <string name="quantity1">Quantity:</string>
+    <string name="date1">Date:</string>
+    <string name="address1">Address:</string>
+    <string name="requests">Requests</string>
+    <string name="phoneNumber1">Phone Number:</string>
+    <string name="email1">Email:</string>
+    <string name="accept1">Accept</string>
+    <string name="reject1">Reject</string>
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <string name="current_orders">Current Orders</string>
+    <string name="pending_requests_title">Pending Requests</string>
+    <string name="confirmed_requests_title">Confirmed Requests</string>
+    <string name="pending_requests"></string>
+    <string name="confirmed_requests"></string>
 </resources>
