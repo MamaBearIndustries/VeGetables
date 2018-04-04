@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "740144602092",
+    "firebase_url": "https://vegetables-1107.firebaseio.com",
+    "project_id": "vegetables-1107",
+    "storage_bucket": "vegetables-1107.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740144602092:android:e778349392fe0619",
+        "android_client_info": {
+          "package_name": "com.mamabearindustries.vegetables"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740144602092-r2hnj8ntt81qfimg1jdqo5i2djliif9d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mamabearindustries.vegetables",
+            "certificate_hash": "53404687c8283822c257e1956f6b9eda4fa8efa4"
+          }
+        },
+        {
+          "client_id": "740144602092-6t2266efapq0mpuf9c5djje0lphrrcna.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoPwcnqjug0S4M1nx_Ov1iVnvneOs4Joc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740144602092-6t2266efapq0mpuf9c5djje0lphrrcna.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
