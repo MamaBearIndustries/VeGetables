@@ -23,13 +23,11 @@ public class FoodInfo extends AppCompatActivity {
         Button addItem = findViewById(R.id.addItemButton);
 
 
+        //public void onClick (View v)
+        //{
 
+        //}
 
-        /*addItem.setOnClickListener(new View.OnClickListener());
-            public void onClick(View v)
-                {
-
-                }*/
 
 
 
