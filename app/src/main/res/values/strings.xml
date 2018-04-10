@@ -72,4 +72,5 @@
     <string name="confirmed_requests_title">Confirmed Requests</string>
     <string name="pending_requests"></string>
     <string name="confirmed_requests"></string>
+    <string name="pastRequests">Previous Requests</string>
 </resources>

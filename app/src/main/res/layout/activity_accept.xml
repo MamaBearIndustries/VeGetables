@@ -11,10 +11,12 @@
         android:id="@+id/requests"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="370dp"
         android:layout_marginTop="20dp"
         android:text="@string/requests"
         android:textSize="36sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -34,27 +36,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/accept1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="63dp"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="33dp"
-        android:text="@string/accept1"
-        app:layout_constraintEnd_toStartOf="@+id/phoneNumber1"
-        app:layout_constraintStart_toEndOf="@+id/email1"
-        app:layout_constraintTop_toBottomOf="@+id/email1" />
-
-    <Button
-        android:id="@+id/reject1"
-        android:layout_width="84dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:text="@string/reject1"
-        app:layout_constraintBottom_toBottomOf="@+id/accept1"
-        app:layout_constraintStart_toStartOf="@+id/address1"
-        app:layout_constraintTop_toTopOf="@+id/accept1" />
 
     <TextView
         android:id="@+id/item1"
@@ -128,5 +109,116 @@
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/date1"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/accept1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="63dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/accept1"
+        app:layout_constraintEnd_toStartOf="@+id/phoneNumber1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/email1"
+        app:layout_constraintTop_toBottomOf="@+id/email1" />
+
+    <Button
+        android:id="@+id/reject1"
+        android:layout_width="84dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/reject1"
+        app:layout_constraintBottom_toBottomOf="@+id/accept1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/address1"
+        app:layout_constraintTop_toTopOf="@+id/accept1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/pastRequests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/pastRequests"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reject1"
+        app:layout_constraintVertical_bias="0.117" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="293dp"
+        android:layout_height="379dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/previousFoodPantry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/foodPantry1"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/previousItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/item1"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/previousDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/date1"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="284dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="9dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/requests">
+
+        <TextView
+            android:id="@+id/blank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/previousQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/quantity1"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/previousPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/phoneNumber1"
+            android:textSize="18sp" />
+    </LinearLayout>
+
 
 </android.support.constraint.ConstraintLayout>
