@@ -183,6 +183,13 @@
             android:layout_height="wrap_content"
             android:text="@string/date1"
             android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/pastEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/email1"
+            android:textSize="18sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -217,6 +224,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/phoneNumber1"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/previousAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/address1"
             android:textSize="18sp" />
     </LinearLayout>
 
