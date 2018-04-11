@@ -9,12 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AcceptActivity">
-
-        </activity>
-
+        <activity android:name=".AcceptActivity"></activity>
         <activity android:name=".MainActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,17 +18,10 @@
             </intent-filter>
 
         </activity>
-
-        <activity android:name=".FoodInfo"></activity>
-
-
-      
-      
-        <activity android:name=".FoodPantry_Orders"></activity>
-      
-        <activity android:name=".Pantry_Search_Screen"></activity>
-
-
+        <activity android:name=".FoodInfo" />
+        <activity android:name=".FoodPantry_Orders" />
+        <activity android:name=".Pantry_Search_Screen" />
+        <activity android:name=".CurrentInventory"></activity>
     </application>
 
 </manifest>
