@@ -17,60 +17,23 @@
     <string name="reject1">Reject</string>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <string name="current_orders">Current Orders</string>
     <string name="pending_requests_title">Pending Requests</string>
     <string name="confirmed_requests_title">Confirmed Requests</string>
     <string name="pending_requests"></string>
     <string name="confirmed_requests"></string>
+
+
+
+
+
+
+
+
+
+    <string name="currentInventory">Current Inventory</string>
+    <string name="inventory">Inventory</string>
+    <string name="dateAdded">Date Added:</string>
+    <string name="expDate2">Expiration Date:</string>
     <string name="pastRequests">Previous Requests</string>
 </resources>
