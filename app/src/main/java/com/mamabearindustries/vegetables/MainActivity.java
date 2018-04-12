@@ -12,22 +12,24 @@ import com.google.firebase.database.FirebaseDatabase;
 public class MainActivity extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("message");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        myRef.setValue("Hello, World!");
+        //myRef.setValue("Hello, World!");
         Button button = (Button) findViewById(R.id.button_search);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(
+                        MainActivity.this,
+                        Pantry_Search_Screen.class);
+                startActivity(i);
+            }
+        });
+
     }
-    public void onClick(View v)
-    {
-        if(v.getId()==R.id.button_search)
-        {
-            Intent i = new Intent(
-                    MainActivity.this,
-                    Pantry_Search_Screen.class);
-            startActivity(i);
-        }
-    }
+
 }
