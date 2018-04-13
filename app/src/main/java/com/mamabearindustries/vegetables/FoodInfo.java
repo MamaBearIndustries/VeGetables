@@ -14,10 +14,7 @@ public class FoodInfo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_info);
-    }
-     public void createNewItem(View V)
 
-    {
 
         EditText itemName = findViewById(R.id.enterItemName);
         EditText quantity = findViewById(R.id.enterQuantity);
@@ -28,7 +25,6 @@ public class FoodInfo extends AppCompatActivity {
         intent.putExtra("quantity", quantity.getText().toString());
         intent.putExtra("date", date.getText().toString());
         startActivity(intent);
-
     }
 
 
