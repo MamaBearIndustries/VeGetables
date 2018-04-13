@@ -16,6 +16,7 @@ public class FoodInfo extends AppCompatActivity {
         setContentView(R.layout.activity_food_info);
     }
      public void createNewItem(View V)
+
     {
 
         EditText itemName = findViewById(R.id.enterItemName);
@@ -23,6 +24,11 @@ public class FoodInfo extends AppCompatActivity {
         EditText date = findViewById(R.id.enterExpDate);
 
         Intent intent = new Intent(this, CurrentInventory.class);
+        intent.putExtra("itemName", itemName.getText().toString());
+        intent.putExtra("quantity", quantity.getText().toString());
+        intent.putExtra("date", date.getText().toString());
+        startActivity(intent);
+
     }
 
 
