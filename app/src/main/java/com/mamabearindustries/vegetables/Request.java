@@ -18,30 +18,57 @@ public class Request
     }
 
     /**
-     *
-     * @return the food item information
+     * Returns the information of the food item.
+     * @return the information of the food item.
      */
     public Food getFood()
     {
         return food;
     }
 
-    /***
-     *
-     * @return the grocery store information
+    /**
+     * Sets the information of the food item.
+     * @param food the information of the food item.
      */
-    public GroceryStore groceryStore()
+    public void setFood(Food food)
+    {
+        this.food = food;
+    }
+
+    /**
+     * Returns the information of the grocery store providing the food item.
+     * @return the information of the grocery store providing the food item.
+     */
+    public GroceryStore getGroceryStore()
     {
         return groceryStore;
     }
 
     /**
-     *
-     * @return the food pantry information
+     * Sets the information of the grocery store.
+     * @param groceryStore the information of the grocery store.
+     */
+    public void setGroceryStore(GroceryStore groceryStore)
+    {
+        this.groceryStore = groceryStore;
+    }
+
+    /**
+     * Returns the information of the food pantry.
+     * @return the information of the food pantry.
      */
     public FoodPantry getFoodPantry()
     {
         return foodPantry;
+    }
+
+    /**
+     * Sets the information of the food pantry.
+     * @param foodPantry the information of the food pantry.
+     */
+    public void setFoodPantry(FoodPantry foodPantry)
+    {
+        this.foodPantry = foodPantry;
     }
 
 }

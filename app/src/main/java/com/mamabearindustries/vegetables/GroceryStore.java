@@ -26,7 +26,7 @@ public class GroceryStore {
     }
 
     /**
-     *
+     * Returns the name of the grocery store.
      * @return the name of the grocery store.
      */
     public String getStoreName()
@@ -35,7 +35,16 @@ public class GroceryStore {
     }
 
     /**
-     *
+     * Sets the name of the grocery store.
+     * @param StoreName the name of the grocery store.
+     */
+    public void setStoreName(String StoreName)
+    {
+        this.StoreName = StoreName;
+    }
+
+    /**
+     * Returns the address of the grocery store.
      * @return the address of the grocery store.
      */
     public String getAddress()
@@ -44,7 +53,16 @@ public class GroceryStore {
     }
 
     /**
-     *
+     * Sets the address of the grocery store.
+     * @param Address the address of the grocery store.
+     */
+    public void setAddress(String Address)
+    {
+        this.Address = Address;
+    }
+
+    /**
+     * Returns the contact phone number of the grocery store.
      * @return the contact phone number of the grocery store.
      */
     public String getPhoneNumber()
@@ -53,8 +71,17 @@ public class GroceryStore {
     }
 
     /**
-     *
-     * @return the contact person's name
+     * Sets the phone number of the grocery store.
+     * @param PhoneNumber the phone number of the grocery store.
+     */
+    public void setPhoneNumber(String PhoneNumber)
+    {
+        this.PhoneNumber = PhoneNumber;
+    }
+
+    /**
+     * Returns the contact name of the grocery store.
+     * @return the contact name of the grocery store.
      */
     public String getContactName()
     {
@@ -62,8 +89,17 @@ public class GroceryStore {
     }
 
     /**
-     *
-     * @return the contact person's email.
+     * Sets the contact name of the grocery store.
+     * @param ContactName the contact name of the grocery store.
+     */
+    public void setContactName(String ContactName)
+    {
+        this.ContactName = ContactName;
+    }
+
+    /**
+     * Returns the contact email of the grocery store.
+     * @return the contact email of the grocery store.
      */
     public String getContactEmail()
     {
@@ -71,7 +107,16 @@ public class GroceryStore {
     }
 
     /**
-     *
+     * Sets the contasct email of the grocery store.
+     * @param ContactEmail the contact email of the grocery store.
+     */
+    public void setContactEmail(String ContactEmail)
+    {
+        this.ContactEmail = ContactEmail;
+    }
+
+    /**
+     * Returns the username of the grocery store.
      * @return the username of the grocery store.
      */
     public String getUsername()
@@ -80,11 +125,25 @@ public class GroceryStore {
     }
 
     /**
-     *
+     * Sets the username of the grocery store.
+     * @param Username the username of the grocery store.
+     */
+    public void setUsername(String Username)
+    {
+        this.Username = Username;
+    }
+
+    /**
+     * Returns the password of the grocery store.
      * @return the password of the grocery store.
      */
     public String getPassword()
     {
         return Password;
+    }
+
+    public void setPassword()
+    {
+        this.Password = Password;
     }
 }

@@ -26,8 +26,8 @@ public class FoodPantry {
     }
 
     /**
-     *
-     * @return the name of the grocery store.
+     * return the name of the food pantry
+     * @return the name of the food pantry
      */
     public String getPantryName()
     {
@@ -35,8 +35,17 @@ public class FoodPantry {
     }
 
     /**
-     *
-     * @return the address of the grocery store.
+     * Sets the name of the food pantry.
+     * @param PantryName the name of the food pantry
+     */
+    public void setPantryName(String PantryName)
+    {
+        this.PantryName = PantryName;
+    }
+
+    /**
+     * Returns the address of the food pantry.
+     * @return the address of the food pantry.
      */
     public String getAddress()
     {
@@ -44,8 +53,17 @@ public class FoodPantry {
     }
 
     /**
-     *
-     * @return the contact phone number of the grocery store.
+     * Sets the address of the food pantry.
+     * @param Address the address of the food pantry.
+     */
+    public void setAddress(String Address)
+    {
+        this.Address = Address;
+    }
+
+    /**
+     * Returns the contact phone number of the food pantry.
+     * @return the contact phone number of the food pantry.
      */
     public String getPhoneNumber()
     {
@@ -53,8 +71,17 @@ public class FoodPantry {
     }
 
     /**
-     *
-     * @return the contact person's name
+     * Sets the contact phone number of the food pantry.
+     * @param PhoneNumber the contact phone number of the food pantry.
+     */
+    public void setPhoneNumber(String PhoneNumber)
+    {
+        this.PhoneNumber = PhoneNumber;
+    }
+
+    /**
+     * Returns the contact name of the food pantry.
+     * @return the contact name of the food pantry.
      */
     public String getContactName()
     {
@@ -62,8 +89,17 @@ public class FoodPantry {
     }
 
     /**
-     *
-     * @return the contact person's email.
+     * Sets the contact name of the food pantry.
+     * @param ContactName the contact name of the food pantry.
+     */
+    public void setContactName(String ContactName)
+    {
+        this.ContactName = ContactName;
+    }
+
+    /**
+     * Returns the contact email of the food pantry.
+     * @return the contact email of the food pantry.
      */
     public String getContactEmail()
     {
@@ -71,8 +107,17 @@ public class FoodPantry {
     }
 
     /**
-     *
-     * @return the username of the grocery store.
+     * Sets the contact email of the food pantry.
+     * @param ContactEmail the contact email of the food pantry.
+     */
+    public void setContactEmail(String ContactEmail)
+    {
+        this.ContactEmail = ContactEmail;
+    }
+
+    /**
+     * Returns the username of the food pantry.
+     * @return the username of the food pantry.
      */
     public String getUsername()
     {
@@ -80,11 +125,29 @@ public class FoodPantry {
     }
 
     /**
-     *
-     * @return the password of the grocery store.
+     * Sets the username of the food pantry.
+     * @param Username the username of the food pantry.
+     */
+    public void setUsername(String Username)
+    {
+        this.Username = Username;
+    }
+
+    /**
+     * Returns the password of the food pantry.
+     * @return the password of the food pantry.
      */
     public String getPassword()
     {
         return Password;
+    }
+
+    /**
+     * Sets the password of the food pantry.
+     * @param Password the password of the food pantry.
+     */
+    public void setPassword(String Password)
+    {
+        this.Password = Password;
     }
 }
