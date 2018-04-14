@@ -15,12 +15,14 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
 
         </activity>
         <activity android:name=".FoodInfo" />
-        <activity android:name=".FoodPantry_Orders" />
-        <activity android:name=".Pantry_Search_Screen" />
+        <activity android:name=".FoodPantry_Orders"
+            android:exported="true"/>
+        <activity android:name=".Pantry_Search_Screen"/>
         <activity android:name=".CurrentInventory"></activity>
     </application>
 

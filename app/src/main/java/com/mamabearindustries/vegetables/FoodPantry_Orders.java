@@ -18,33 +18,43 @@ public class FoodPantry_Orders extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_pantry__orders);
-    }
 
-    public void FoodPantry_Orders(View v)
-    {
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("message");
-
-        myRef.setValue("Hello World!");
-        /*
-        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
-        mDatabase.child("numbers").push().setValue("hello");
-        */
-
-        /*
         TextView PendingRequestText = findViewById(R.id.lblPendingRequests);
         TextView ConfirmedRequestText = findViewById(R.id.lblConfirmedRequests);
 
-        Bundle bundle = getIntent().getExtras();
+        String PendingRequest = PendingRequestText.getText().toString();
+        String ConfirmedRequest = ConfirmedRequestText.getText().toString();
 
-        Double PendingRequest = bundle.getDouble("");
-        Double ConfirmedRequest = bundle.getDouble("");
-        */
+        Food food = new Food("Honey",5, "12/37/2056");
+        GroceryStore groceryStore = new GroceryStore("MamaBears", "85 Honey Street","514-123-4356","MamaBear","MamaBear@gmail.com","MamaBear","ThisIsABadPassword");
+        FoodPantry foodPantry = new FoodPantry("PapaBear","86 Honee Street","514-234-6452","PapaBear","PapaBear@gmail.com","PapaBear","EvenWorsePassword");
 
+        Request request = new Request(food,groceryStore,foodPantry);
+
+        PendingRequestText.setText("Item: "+request.getFood().getNameItem().toString());
+
+    }
+
+    /*
+    public void FoodPantry_Orders(View v)
+    {
+        TextView PendingRequestText = findViewById(R.id.lblPendingRequests);
+        TextView ConfirmedRequestText = findViewById(R.id.lblConfirmedRequests);
+
+        String PendingRequest = PendingRequestText.getText().toString();
+        String ConfirmedRequest = ConfirmedRequestText.getText().toString();
+
+        Food food = new Food("Honey",5, "12/37/2056");
+        GroceryStore groceryStore = new GroceryStore("MamaBears", "85 Honey Street","514-123-4356","MamaBear","MamaBear@gmail.com","MamaBear","ThisIsABadPassword");
+        FoodPantry foodPantry = new FoodPantry("PapaBear","86 Honee Street","514-234-6452","PapaBear","PapaBear@gmail.com","PapaBear","EvenWorsePassword");
+
+        Request request = new Request(food,groceryStore,foodPantry);
+
+        PendingRequestText.setText("Food Item"+request.getFood().getNameItem().toString());
 
 
 
     }
-
+*/
 
 }
