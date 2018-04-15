@@ -46,30 +46,33 @@ public class Pantry_Search_Screen extends AppCompatActivity {
                 //Search for the values in database and populate Search Options
                 FirebaseDatabase.getInstance().getReferenceFromUrl("https://vegetables-1107.firebaseio.com/Message")
                         .addListenerForSingleValueEvent(new ValueEventListener() {
+                            //Looks at exisiting values once and then detaches
                             @Override
                             public void onDataChange(DataSnapshot dataSnapshot) {
-                                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                                    String user = snapshot.getValue(String.class);
-                                    for(CheckBox checkBox: checkBoxes)
-                                    {
-                                        checkboxNames.add(checkBox.getText().toString());
-                                    }
-                                    if(counter<3)
-                                    {
-                                        if(!checkboxNames.contains(user))
-                                        {
-                                            checkBoxes.get(counter).setText(user);
+                                //For each store under the main subclass...
+                                for (DataSnapshot stores : dataSnapshot.getChildren()) {
+                                  //Loop through the items within each store
+                                   for(DataSnapshot items : stores.getChildren())
+                                   {
+                                    //If the stores contains the searched item
+                                       String itemName = items.getValue(String.class);
+                                    if (itemName.equals(str)) {
+                                      //Get updated list of possible stores
+                                        for (CheckBox checkBox : checkBoxes) {
+                                            checkboxNames.add(checkBox.getText().toString());
                                         }
+                                       //If the stores that contains this item is not on the list already, add it
+                                        if (counter < 3) {
+                                            if (!checkboxNames.contains(stores.getKey())) {
+                                                checkBoxes.get(counter).setText(stores.getKey());
+                                            }
+
+                                        }
+                                        //Counter is to ensure that we do not pass our 3 store max display
+                                        counter++;
+                                    }
 
                                    }
-
-
-
-
-                                 /*   if(counter>1)
-                                         break;*/
-
-                                    counter++;
                                 }
                             }
                             @Override
