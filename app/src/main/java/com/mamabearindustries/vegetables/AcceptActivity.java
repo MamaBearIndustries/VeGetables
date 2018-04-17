@@ -24,5 +24,7 @@ public class AcceptActivity extends AppCompatActivity {
         TextView pastPhone = findViewById(R.id.previousPhoneNumber);
         TextView pastQuantity = findViewById(R.id.previousQuantity);
         TextView pastItem = findViewById(R.id.previousItem);
+
+
     }
 }

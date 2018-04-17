@@ -11,11 +11,10 @@ public class Food
     private String ExpirationDate = "";
     private String RequestedDate = "";
 
-    public Food(String NameItem, int Quantity, String ExpirationDate)
-    {
+    public Food(String NameItem, int Quantity) {
         this.NameItem = NameItem;
         this.Quantity = Quantity;
-        this.ExpirationDate = ExpirationDate;
+       // this.ExpirationDate = ExpirationDate;
     }
 
     /**
