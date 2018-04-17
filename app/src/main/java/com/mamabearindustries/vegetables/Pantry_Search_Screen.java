@@ -1,3 +1,7 @@
+/**
+ * Created by Vishnu Penubarthi
+ */
+
 package com.mamabearindustries.vegetables;
 
 import android.provider.ContactsContract;
@@ -20,18 +24,23 @@ import java.util.ArrayList;
 
 public class Pantry_Search_Screen extends AppCompatActivity {
     //All the relevant references
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference databaseReference = database.getReferenceFromUrl("https://vegetables-1107.firebaseio.com/message");
-    String word = "";
-    int counter = 0;
-    ArrayList<CheckBox> checkBoxes = new ArrayList<>();
-    ArrayList<String> checkboxNames = new ArrayList<>();
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+private int counter = 0;
+    private ArrayList<CheckBox> checkBoxes = new ArrayList<>();
+    private ArrayList<String> checkboxNames = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantry__search__screen);
         SearchView searchView = findViewById(R.id.searchView);
         //Getting the checkboxes and adding them to an arrayList of Checkboxes
+        /**
+         * This method is the primary method in which a user can query for a specific item, and get a list of stores which have that item.
+         * They can then select a few of the items and then request for items from them.
+         *
+         */
+
+
         final CheckBox item1 = findViewById(R.id.item_2);
         final CheckBox item2 = findViewById(R.id.item_3);
         final CheckBox item3 = findViewById(R.id.item_1);
@@ -42,21 +51,20 @@ public class Pantry_Search_Screen extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(final String str) {
-                // Toast.makeText(Pantry_Search_Screen.this,s,Toast.LENGTH_SHORT).show();
                 //Search for the values in database and populate Search Options
                 FirebaseDatabase.getInstance().getReferenceFromUrl("https://vegetables-1107.firebaseio.com/Message")
                         .addListenerForSingleValueEvent(new ValueEventListener() {
-                            //Looks at exisiting values once and then detaches
-                            @Override
-                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                //For each store under the main subclass...
-                                for (DataSnapshot stores : dataSnapshot.getChildren()) {
-                                  //Loop through the items within each store
-                                   for(DataSnapshot items : stores.getChildren())
-                                   {
-                                    //If the stores contains the searched item
-                                       String itemName = items.getValue(String.class);
-                                    if (itemName.equals(str)) {
+                                       //Looks at exisiting values once and then detaches
+                                       @Override
+                                       public void onDataChange(DataSnapshot dataSnapshot) {
+                                           //For each store under the main subclass...
+                                           for (DataSnapshot stores : dataSnapshot.getChildren()) {
+                                               //Loop through the items within each store
+                                               for(DataSnapshot items : stores.getChildren())
+                                               {
+                                                   //If the stores contains the searched item
+                                                   String itemName = items.getValue(String.class);
+                                                   if (itemName.equals(str)) {
                                       //Get updated list of possible stores
                                         for (CheckBox checkBox : checkBoxes) {
                                             checkboxNames.add(checkBox.getText().toString());
@@ -65,6 +73,7 @@ public class Pantry_Search_Screen extends AppCompatActivity {
                                         if (counter < 3) {
                                             if (!checkboxNames.contains(stores.getKey())) {
                                                 checkBoxes.get(counter).setText(stores.getKey());
+
                                             }
 
                                         }
