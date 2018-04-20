@@ -24,16 +24,10 @@
     <string name="confirmed_requests"></string>
 
 
-
-
-
-
-
-
-
     <string name="currentInventory">Current Inventory</string>
     <string name="inventory">Inventory</string>
     <string name="dateAdded">Date Added:</string>
     <string name="expDate2">Expiration Date:</string>
     <string name="pastRequests">Previous Requests</string>
+    <string name="title_activity_grocery_store__sign_up">GroceryStore_SignUp</string>
 </resources>
