@@ -41,6 +41,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button groceryStoreSignUp = (Button) findViewById(R.id.Grocery_Store_Sign_Up);
+        groceryStoreSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(
+                        MainActivity.this, GroceryStoreSignUp.class);
+                startActivity(i);
+            }
+        });
     }
 
 }
