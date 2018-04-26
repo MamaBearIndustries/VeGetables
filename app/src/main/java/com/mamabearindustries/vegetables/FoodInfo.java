@@ -18,11 +18,10 @@ public class FoodInfo extends AppCompatActivity {
 
         EditText itemNameText = findViewById(R.id.enterItemName);
         EditText quantityText = findViewById(R.id.enterQuantity);
-        EditText dateText = findViewById(R.id.enterExpDate);
 
         String itemName = itemNameText.getText().toString();
         int quantity = Integer.parseInt(quantityText.getText().toString());
-        String date = dateText.getText().toString();
+
 
         Food food = new Food(itemName, quantity);
 
@@ -30,7 +29,6 @@ public class FoodInfo extends AppCompatActivity {
         Intent intent = new Intent(this, CurrentInventory.class);
         intent.putExtra("itemName", itemName);
         intent.putExtra("quantity", quantity);
-        intent.putExtra("date", date);
         startActivity(intent);
     }
 
