@@ -36,11 +36,10 @@ public class FoodInfo extends AppCompatActivity {
         DatabaseReference ref = database.getReference("https://vegetables-1107.firebaseio.com/Message");
         DatabaseReference usersRef = ref.child("users");
 
-
         Intent intent = new Intent(this, CurrentInventory.class);
         intent.putExtra("itemName", itemName);
         intent.putExtra("quantity", quantity);
-        startActivity(intent);
+      //  startActivity(intent);
 
 
 
