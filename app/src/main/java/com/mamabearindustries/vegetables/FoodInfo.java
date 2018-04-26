@@ -8,12 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
 public class FoodInfo extends AppCompatActivity {
 
     @Override
@@ -24,28 +18,20 @@ public class FoodInfo extends AppCompatActivity {
 
         EditText itemNameText = findViewById(R.id.enterItemName);
         EditText quantityText = findViewById(R.id.enterQuantity);
-
+        EditText dateText = findViewById(R.id.enterExpDate);
 
         String itemName = itemNameText.getText().toString();
         int quantity = Integer.parseInt(quantityText.getText().toString());
+        String date = dateText.getText().toString();
 
         Food food = new Food(itemName, quantity);
-
-
-        final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference ref = database.getReference("https://vegetables-1107.firebaseio.com/Message");
-        DatabaseReference usersRef = ref.child("users");
 
 
         Intent intent = new Intent(this, CurrentInventory.class);
         intent.putExtra("itemName", itemName);
         intent.putExtra("quantity", quantity);
+        intent.putExtra("date", date);
         startActivity(intent);
-
-
-
-
-
     }
 
 
