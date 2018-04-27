@@ -62,6 +62,7 @@
         app:layout_constraintStart_toStartOf="@+id/itemName"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <Button
         android:id="@+id/addItemButton"
         android:layout_width="wrap_content"
@@ -99,28 +100,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/dateAddedDate"
-        android:layout_width="58dp"
-        android:layout_height="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="168dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.899"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/expDateData"
-        android:layout_width="57dp"
-        android:layout_height="21dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="188dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.901"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
