@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class GroceryStoreSignUp extends AppCompatActivity {
- GroceryStore myGroceryStore;
+ static GroceryStore myGroceryStore;
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {

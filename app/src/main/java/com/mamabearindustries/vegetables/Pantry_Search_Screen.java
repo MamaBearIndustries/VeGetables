@@ -42,7 +42,6 @@ private int counter = 0;
          * They can then select a few of the items and then request for items from them.
          *
          */
-
         final CheckBox item1 = findViewById(R.id.item_2);
         final CheckBox item2 = findViewById(R.id.item_3);
         final CheckBox item3 = findViewById(R.id.item_1);
