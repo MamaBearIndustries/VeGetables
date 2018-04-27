@@ -39,16 +39,16 @@ public class CurrentInventory extends AppCompatActivity {
 
         TextView item = findViewById(R.id.itemNameData);
         TextView quant = findViewById(R.id.quantityData);
-        TextView expDate1 = findViewById(R.id.expDateData);
+
 
         String itemName = bundle.getString("itemName");
         String quantity = bundle.getString("quantity");
-        String expDate = bundle.getString("date");
+
 
 
         item.setText(itemName);
         quant.setText(quantity);
-        expDate1.setText(expDate);
+
 
 
     }
