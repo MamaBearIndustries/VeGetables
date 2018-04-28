@@ -29,7 +29,7 @@ public class GroceryStore_Or_FoodPanty extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(
-                        GroceryStore_Or_FoodPanty.this, GroceryStoreSignUp.class);
+                        GroceryStore_Or_FoodPanty.this, FoodPantrySignUp.class);
                 startActivity(i);
             }
         });

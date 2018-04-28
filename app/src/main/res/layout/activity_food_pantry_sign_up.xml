@@ -4,12 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mamabearindustries.vegetables.GroceryStoreSignUp"
-    tools:layout_editor_absoluteY="89dp">
-
+    tools:context="com.mamabearindustries.vegetables.FoodPantrySignUp">
 
     <TextView
-        android:id="@+id/store_password"
+        android:id="@+id/pantry_password"
         android:layout_width="570dp"
         android:layout_height="41dp"
         android:layout_marginTop="8dp"
@@ -20,10 +18,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enter_username" />
+        app:layout_constraintTop_toBottomOf="@+id/enter_pantry_username" />
 
     <EditText
-        android:id="@+id/enter_password"
+        android:id="@+id/enter_pantry_password"
         android:layout_width="570dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -35,10 +33,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/store_password" />
+        app:layout_constraintTop_toBottomOf="@+id/pantry_password" />
 
     <TextView
-        android:id="@+id/store_username"
+        android:id="@+id/pantry_username"
         android:layout_width="570dp"
         android:layout_height="41dp"
         android:layout_marginTop="8dp"
@@ -49,10 +47,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enter_store_contact_email" />
+        app:layout_constraintTop_toBottomOf="@+id/enter_pantry_contact_email" />
 
     <EditText
-        android:id="@+id/enter_username"
+        android:id="@+id/enter_pantry_username"
         android:layout_width="570dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -64,15 +62,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/store_username" />
+        app:layout_constraintTop_toBottomOf="@+id/pantry_username" />
 
     <TextView
-        android:id="@+id/store_contact_email"
+        android:id="@+id/pantry_contact_email"
         android:layout_width="570dp"
         android:layout_height="41dp"
         android:layout_marginTop="448dp"
         android:fontFamily="@font/cinzel"
-        android:text="Store Contact Email:"
+        android:text="Pantry Contact Email:"
         android:textColor="@android:color/background_dark"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,27 +79,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/enter_store_contact_email"
+        android:id="@+id/enter_pantry_contact_email"
         android:layout_width="570dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:fontFamily="@font/cinzel"
         android:inputType="textPersonName"
-        android:text="Store Contact Email"
+        android:text="Pantry Contact Email"
         android:textColor="@android:color/background_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/store_contact_email" />
+        app:layout_constraintTop_toBottomOf="@+id/pantry_contact_email" />
 
     <TextView
-        android:id="@+id/store_contact_name"
+        android:id="@+id/pantry_contact_name"
         android:layout_width="570dp"
         android:layout_height="41dp"
         android:layout_marginTop="340dp"
         android:fontFamily="@font/cinzel"
-        android:text="Store Contact Name:"
+        android:text="Pantry Contact Name:"
         android:textColor="@android:color/background_dark"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -110,27 +108,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/enter_store_contact_name"
+        android:id="@+id/enter_pantry_contact_name"
         android:layout_width="570dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:fontFamily="@font/cinzel"
         android:inputType="textPersonName"
-        android:text="Store Contact Name"
+        android:text="Pantry Contact Name"
         android:textColor="@android:color/background_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/store_contact_name" />
+        app:layout_constraintTop_toBottomOf="@+id/pantry_contact_name" />
 
     <TextView
-        android:id="@+id/store_phone_number"
+        android:id="@+id/pantry_phone_number"
         android:layout_width="570dp"
         android:layout_height="41dp"
         android:layout_marginTop="228dp"
         android:fontFamily="@font/cinzel"
-        android:text="Store Phone Number:"
+        android:text="Pantry Phone Number:"
         android:textColor="@android:color/background_dark"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -139,27 +137,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/enter_store_phone_number"
+        android:id="@+id/enter_pantry_phone_number"
         android:layout_width="570dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:fontFamily="@font/cinzel"
         android:inputType="textPersonName"
-        android:text="Store Phone Number"
+        android:text="Pantry Phone Number"
         android:textColor="@android:color/background_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/store_phone_number" />
+        app:layout_constraintTop_toBottomOf="@+id/pantry_phone_number" />
 
     <TextView
-        android:id="@+id/store_address"
+        android:id="@+id/pantry_address"
         android:layout_width="570dp"
         android:layout_height="41dp"
         android:layout_marginTop="120dp"
         android:fontFamily="@font/cinzel"
-        android:text="Store Address:"
+        android:text="Pantry Address:"
         android:textColor="@android:color/background_dark"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -168,27 +166,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/enter_store_address"
+        android:id="@+id/enter_pantry_address"
         android:layout_width="570dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:fontFamily="@font/cinzel"
         android:inputType="textPersonName"
-        android:text="Store Address"
+        android:text="Pantry Address"
         android:textColor="@android:color/background_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/store_address" />
+        app:layout_constraintTop_toBottomOf="@+id/pantry_address" />
 
     <TextView
-        android:id="@+id/store_name"
+        android:id="@+id/pantry_name"
         android:layout_width="570dp"
         android:layout_height="41dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/cinzel"
-        android:text="Store Name:"
+        android:text="Pantry Name:"
         android:textColor="@android:color/background_dark"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -197,7 +195,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/enter_store_name"
+        android:id="@+id/enter_pantry_name"
         android:layout_width="570dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -209,13 +207,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/store_name" />
+        app:layout_constraintTop_toBottomOf="@+id/pantry_name" />
 
     <Button
-        android:id="@+id/Sign_up"
+        android:id="@+id/Pantry_Sign_up"
         android:layout_width="153dp"
         android:layout_height="66dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/cinzel"
         android:text="Submit"
         android:textColor="@android:color/background_dark"
@@ -223,6 +221,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enter_password" />
+        app:layout_constraintTop_toBottomOf="@+id/enter_pantry_password" />
 
 </android.support.constraint.ConstraintLayout>

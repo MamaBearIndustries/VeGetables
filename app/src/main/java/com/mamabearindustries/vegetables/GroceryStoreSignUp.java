@@ -20,32 +20,33 @@ public class GroceryStoreSignUp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grocery_store_sign_up);
-       final EditText name = findViewById(R.id.enter_store_name);
-        final EditText address = findViewById(R.id.enter_store_address);
-        final EditText phoneNumber = findViewById(R.id.enter_store_phone_number);
-        final EditText contactName = findViewById(R.id.enter_store_contact_name);
-        final EditText contactEmail = findViewById(R.id.enter_store_contact_email);
-        final  EditText username = findViewById(R.id.enter_username);
-        final EditText password = findViewById(R.id.enter_password);
+
+       final EditText grocery_name = findViewById(R.id.enter_store_name);
+        final EditText grocery_address = findViewById(R.id.enter_store_address);
+        final EditText grocery_phoneNumber = findViewById(R.id.enter_store_phone_number);
+        final EditText grocery_contactName = findViewById(R.id.enter_store_contact_name);
+        final EditText grocery_contactEmail = findViewById(R.id.enter_store_contact_email);
+        final  EditText grocery_username = findViewById(R.id.enter_username);
+        final EditText grocery_password = findViewById(R.id.enter_password);
 
         Button storeSignup = findViewById(R.id.Sign_up);
         storeSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                myGroceryStore = new GroceryStore(name.getText().toString(),address.getText().toString(),phoneNumber.getText().toString(),contactName.getText().toString(),contactEmail.getText().toString(),username.getText().toString(),password.getText().toString());
+                myGroceryStore = new GroceryStore(grocery_name.getText().toString(),grocery_address.getText().toString(),grocery_phoneNumber.getText().toString(),grocery_contactName.getText().toString(),grocery_contactEmail.getText().toString(),grocery_username.getText().toString(),grocery_password.getText().toString());
                 final DatabaseReference stores = database.getReference().child("Grocery Stores").child(myGroceryStore.getStoreName()).child("Info");
 
 
-                Map<String, Object> storeInfo = new HashMap<>();
-                storeInfo.put("Address", myGroceryStore.getAddress());
-                storeInfo.put("Phone Number", myGroceryStore.getPhoneNumber());
-                storeInfo.put("Contact Name", myGroceryStore.getContactName());
-                storeInfo.put("Contact Email", myGroceryStore.getContactEmail());
-                storeInfo.put("Username", myGroceryStore.getUsername());
-                storeInfo.put("Password", myGroceryStore.getPassword());
+                Map<String, Object> store_grocery_info = new HashMap<>();
+                store_grocery_info.put("Address", myGroceryStore.getAddress());
+                store_grocery_info.put("Phone Number", myGroceryStore.getPhoneNumber());
+                store_grocery_info.put("Contact Name", myGroceryStore.getContactName());
+                store_grocery_info.put("Contact Email", myGroceryStore.getContactEmail());
+                store_grocery_info.put("Username", myGroceryStore.getUsername());
+                store_grocery_info.put("Password", myGroceryStore.getPassword());
 
-                stores.updateChildren(storeInfo);
+                stores.updateChildren(store_grocery_info);
 
                 Intent i = new Intent(
                         GroceryStoreSignUp.this, Sign_In.class);
