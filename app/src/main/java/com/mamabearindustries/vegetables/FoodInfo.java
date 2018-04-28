@@ -42,6 +42,7 @@ public class FoodInfo extends AppCompatActivity {
 
                 //Still have not implemented way to check if an item already exists and then add/update the number of that item
                 //This only adds items so far as if they never existed
+                //Must connect this to firebase
 
                 Map<String, Object> store_food_info = new HashMap<>();
                 store_food_info.put(food.getNameItem(),food.getQuantity());
