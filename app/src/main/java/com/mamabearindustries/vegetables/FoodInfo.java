@@ -40,6 +40,9 @@ public class FoodInfo extends AppCompatActivity {
                 DatabaseReference foods = database.getReferenceFromUrl("https://vegetables-1107.firebaseio.com/GroceryStores")
                         .child(GroceryStoreSignUp.myGroceryStore.getStoreName()).child("Food");
 
+                //Still have not implemented way to check if an item already exists and then add/update the number of that item
+                //This only adds items so far as if they never existed
+
                 Map<String, Object> store_food_info = new HashMap<>();
                 store_food_info.put(food.getNameItem(),food.getQuantity());
                 foods.updateChildren(store_food_info);
