@@ -36,7 +36,7 @@ public class FoodPantrySignUp extends AppCompatActivity {
             public void onClick(View view) {
 
                 myFoodPantry = new FoodPantry(pantry_name.getText().toString(),pantry_address.getText().toString(),pantry_phoneNumber.getText().toString(),pantry_contactName.getText().toString(),pantry_contactEmail.getText().toString(),pantry_username.getText().toString(),pantry_password.getText().toString());
-                final DatabaseReference pantries = database.getReference().child("Food Pantries").child(myFoodPantry.getPantryName()).child("Info");
+                final DatabaseReference pantries = database.getReference().child("FoodPantries").child(myFoodPantry.getPantryName()).child("Info");
 
                 Map<String, Object> storeInfo = new HashMap<>();
                 storeInfo.put("Address", myFoodPantry.getAddress());

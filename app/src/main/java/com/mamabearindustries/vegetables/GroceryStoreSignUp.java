@@ -27,7 +27,7 @@ public class GroceryStoreSignUp extends AppCompatActivity {
         final EditText grocery_contactName = findViewById(R.id.enter_store_contact_name);
         final EditText grocery_contactEmail = findViewById(R.id.enter_store_contact_email);
         final  EditText grocery_username = findViewById(R.id.enter_username);
-        final EditText grocery_password = findViewById(R.id.enter_password);
+        final EditText grocery_password = findViewById(R.id.enter_grocery_password);
 
         Button storeSignup = findViewById(R.id.Sign_up);
         storeSignup.setOnClickListener(new View.OnClickListener() {
@@ -35,7 +35,7 @@ public class GroceryStoreSignUp extends AppCompatActivity {
             public void onClick(View view) {
 
                 myGroceryStore = new GroceryStore(grocery_name.getText().toString(),grocery_address.getText().toString(),grocery_phoneNumber.getText().toString(),grocery_contactName.getText().toString(),grocery_contactEmail.getText().toString(),grocery_username.getText().toString(),grocery_password.getText().toString());
-                final DatabaseReference stores = database.getReference().child("Grocery Stores").child(myGroceryStore.getStoreName()).child("Info");
+                final DatabaseReference stores = database.getReference().child("GroceryStores").child(myGroceryStore.getStoreName()).child("Info");
 
 
                 Map<String, Object> store_grocery_info = new HashMap<>();
