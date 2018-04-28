@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mamabearindustries.vegetables.GroceryStore_Or_FoodPanty"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/text_gStore_vs_fPantry"
+        android:layout_width="513dp"
+        android:layout_height="126dp"
+        android:fontFamily="@font/cinzel"
+        android:text="Are You a Food Pantry or Grocery Store?"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/store_Grocery"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/store_Grocery"
+        android:layout_width="202dp"
+        android:layout_height="76dp"
+        android:backgroundTint="@android:color/darker_gray"
+        android:fontFamily="@font/cinzel"
+        android:text="Grocery Store"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/pantry_Food"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_gStore_vs_fPantry"
+        app:layout_constraintVertical_bias="0.379" />
+
+    <Button
+        android:id="@+id/pantry_Food"
+        android:layout_width="184dp"
+        android:layout_height="64dp"
+        android:backgroundTint="?attr/colorAccent"
+        android:fontFamily="@font/cinzel"
+        android:text="Food Pantry"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/store_Grocery" />
+</android.support.constraint.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.mamabearindustries.vegetables;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -45,6 +46,10 @@ public class GroceryStoreSignUp extends AppCompatActivity {
                 storeInfo.put("Password", myGroceryStore.getPassword());
 
                 stores.updateChildren(storeInfo);
+
+                Intent i = new Intent(
+                        GroceryStoreSignUp.this, Sign_In.class);
+                startActivity(i);
             }
         });
 

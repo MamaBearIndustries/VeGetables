@@ -25,7 +25,8 @@
         <activity android:name=".CurrentInventory" />
         <activity android:name=".GroceryStoreSignUp" />
         <activity android:name=".WelcomeScreen" />
-        <activity android:name=".Sign_In"></activity>
+        <activity android:name=".Sign_In" />
+        <activity android:name=".GroceryStore_Or_FoodPanty"></activity>
     </application>
 
 </manifest>
