@@ -55,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        Button button2 = (Button) findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
+        Button CurrentInv = (Button) findViewById(R.id.button2);
+        CurrentInv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(
@@ -71,6 +71,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(
                         MainActivity.this, GroceryStoreSignUp.class);
+                startActivity(i);
+            }
+        });
+        Button signIn = (Button) findViewById(R.id.toSignIn);
+        signIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(
+                        MainActivity.this, Sign_In.class);
                 startActivity(i);
             }
         });
