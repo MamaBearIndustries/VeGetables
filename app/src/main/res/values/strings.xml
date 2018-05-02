@@ -30,4 +30,13 @@
     <string name="expDate2">Expiration Date:</string>
     <string name="pastRequests">Previous Requests</string>
     <string name="title_activity_grocery_store__sign_up">GroceryStore_SignUp</string>
+    <string name="vegetables">VeGETables</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="password2">Password:</string>
+    <string name="username2">Username:</string>
+    <string name="signin">Sign In</string>
+    <string name="signup">Sign Up</string>
+    <string name="makeaccount">Don\'t have an account?</string>
+    <string name="welcome_text">Welcome to VeGETables</string>
 </resources>

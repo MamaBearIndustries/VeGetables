@@ -150,4 +150,11 @@ public class FoodPantry {
     {
         this.Password = Password;
     }
+
+    /**
+     * Created by Mary on 4/25/18.
+     */
+
+    public static class FoodPantrySignUp {
+    }
 }
