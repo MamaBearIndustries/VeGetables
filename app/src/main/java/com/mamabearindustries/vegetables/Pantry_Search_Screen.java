@@ -13,6 +13,8 @@ import android.widget.CompoundButton;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Button;
+import android.view.View;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -20,6 +22,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import android.content.Intent;
+
 
 import java.util.ArrayList;
 
@@ -42,12 +46,24 @@ private int counter = 0;
          * They can then select a few of the items and then request for items from them.
          *
          */
+
+
         final CheckBox item1 = findViewById(R.id.item_2);
         final CheckBox item2 = findViewById(R.id.item_3);
         final CheckBox item3 = findViewById(R.id.item_1);
         checkBoxes.add(item1);
         checkBoxes.add(item2);
         checkBoxes.add(item3);
+
+        Button FoodPantryOrders = (Button) findViewById(R.id.FoodPantryOrders);
+        FoodPantryOrders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(
+                        Pantry_Search_Screen.this, FoodPantry_Orders.class);
+                startActivity(i);
+            }
+        });
 
         //Have searchbox listen to what is being typed in
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -99,6 +115,10 @@ private int counter = 0;
             public boolean onQueryTextChange(String s) {
                 return false;
             }
+
+            //SWITCH
+            Button FoodPantryOrder = (Button) findViewById(R.id.FoodPantryOrder);
+
         });
 
         item1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
