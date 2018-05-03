@@ -17,10 +17,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FoodInfo" />
+        <activity
+            android:name=".FoodInfo"
+            android:exported="true"/>
         <activity
             android:name=".FoodPantry_Orders"
-            android:exported="true" />
+            android:exported="true"/>
         <activity android:name=".Pantry_Search_Screen" />
         <activity android:name=".CurrentInventory" />
         <activity android:name=".GroceryStoreSignUp" />

@@ -74,6 +74,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+
+        Button FoodPantryOrder = (Button) findViewById(R.id.FoodPantryOrder);
+        FoodPantryOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(
+                        MainActivity.this, FoodPantry_Orders.class);
+                startActivity(i);
+            }
+        });
     }
 
 }
