@@ -25,6 +25,18 @@
             android:orientation="vertical">
 
         </LinearLayout>
+
+        <Button
+            android:id="@+id/addItemButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cinzel"
+            android:text="@string/addNewItem"
+            android:textColor="@android:color/background_dark"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scroll_view" />
     </ScrollView>
 
     <TextView
@@ -37,6 +49,7 @@
         android:textAlignment="center"
         android:textSize="30sp"
         android:textStyle="bold"
+        android:textColor="@android:color/background_dark"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -46,33 +59,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/cinzel"
         android:text="@string/currentInventory"
+        android:textColor="@android:color/background_dark"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inventory" />
 
 
-    <Button
-        android:id="@+id/addItemButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:text="@string/addNewItem"
-        android:textSize="14sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scroll_view" />
-
     <TextView
         android:id="@+id/item_name_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="28dp"
         android:fontFamily="@font/cinzel"
         android:text="Item Name:"
+        android:textColor="@android:color/background_dark"
         android:textSize="28sp"
         app:layout_constraintStart_toStartOf="@+id/currentInventory"
         app:layout_constraintTop_toBottomOf="@+id/currentInventory" />
@@ -81,13 +85,15 @@
         android:id="@+id/item_quanitity_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
+        android:layout_marginEnd="76dp"
         android:fontFamily="@font/cinzel"
         android:text="Item Quantity:"
+        android:textColor="@android:color/background_dark"
         android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="@+id/item_name_title"
         app:layout_constraintEnd_toEndOf="@+id/scroll_view"
-        app:layout_constraintTop_toTopOf="@+id/item_name_title" />
+        app:layout_constraintTop_toTopOf="@+id/item_name_title"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </android.support.constraint.ConstraintLayout>

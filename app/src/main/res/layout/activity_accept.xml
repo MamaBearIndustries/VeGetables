@@ -16,6 +16,8 @@
         android:text="@string/requests"
         android:textSize="36sp"
         android:textStyle="bold"
+        android:fontFamily="@font/cinzel"
+        android:textColor="@android:color/background_dark"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,6 +33,8 @@
         android:layout_marginTop="89dp"
         android:text="@string/foodPantry1"
         android:textSize="24sp"
+        android:fontFamily="@font/cinzel"
+        android:textColor="@android:color/background_dark"
         app:layout_constraintBottom_toBottomOf="@+id/phoneNumber1"
         app:layout_constraintEnd_toStartOf="@+id/quantity1"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,6 +49,8 @@
         android:layout_marginTop="51dp"
         android:text="@string/item1"
         android:textSize="18sp"
+        android:fontFamily="@font/cinzel"
+        android:textColor="@android:color/background_dark"
         app:layout_constraintBottom_toBottomOf="@+id/date1"
         app:layout_constraintStart_toStartOf="@+id/pantry1"
         app:layout_constraintTop_toTopOf="@+id/pantry1" />
@@ -58,6 +64,8 @@
         android:layout_marginTop="14dp"
         android:text="@string/quantity1"
         android:textSize="18sp"
+        android:fontFamily="@font/cinzel"
+        android:textColor="@android:color/background_dark"
         app:layout_constraintBottom_toTopOf="@+id/phoneNumber1"
         app:layout_constraintEnd_toEndOf="@+id/requests"
         app:layout_constraintTop_toBottomOf="@+id/pantry1" />
@@ -72,6 +80,8 @@
         android:layout_marginTop="17dp"
         android:text="@string/date1"
         android:textSize="18sp"
+        android:fontFamily="@font/cinzel"
+        android:textColor="@android:color/background_dark"
         app:layout_constraintBottom_toTopOf="@+id/email1"
         app:layout_constraintEnd_toEndOf="@+id/item1"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,6 +95,8 @@
         android:layout_marginTop="16dp"
         android:text="@string/address1"
         android:textSize="18sp"
+        android:fontFamily="@font/cinzel"
+        android:textColor="@android:color/background_dark"
         app:layout_constraintStart_toStartOf="@+id/phoneNumber1"
         app:layout_constraintTop_toBottomOf="@+id/phoneNumber1" />
 
@@ -96,6 +108,8 @@
         android:layout_marginTop="120dp"
         android:text="@string/phoneNumber1"
         android:textSize="18sp"
+        android:fontFamily="@font/cinzel"
+        android:textColor="@android:color/background_dark"
         app:layout_constraintBottom_toBottomOf="@+id/reject1"
         app:layout_constraintStart_toStartOf="@+id/quantity1"
         app:layout_constraintTop_toBottomOf="@+id/requests" />
@@ -107,6 +121,8 @@
         android:layout_marginTop="227dp"
         android:text="@string/email1"
         android:textSize="18sp"
+        android:fontFamily="@font/cinzel"
+        android:textColor="@android:color/background_dark"
         app:layout_constraintStart_toStartOf="@+id/date1"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -118,6 +134,9 @@
         android:layout_marginStart="62dp"
         android:layout_marginTop="32dp"
         android:text="@string/accept1"
+        android:fontFamily="@font/cinzel"
+        android:textColor="@android:color/background_dark"
+        android:backgroundTint="?attr/colorAccent"
         app:layout_constraintEnd_toStartOf="@+id/phoneNumber1"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/email1"
@@ -129,6 +148,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:text="@string/reject1"
+        android:fontFamily="@font/cinzel"
+        android:textColor="@android:color/background_dark"
+        android:backgroundTint="?attr/colorAccent"
         app:layout_constraintBottom_toBottomOf="@+id/accept1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -147,6 +169,8 @@
         android:text="@string/pastRequests"
         android:textSize="30sp"
         android:textStyle="bold"
+        android:fontFamily="@font/cinzel"
+        android:textColor="@android:color/background_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -168,13 +192,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/foodPantry1"
+            android:fontFamily="@font/cinzel"
+            android:textColor="@android:color/background_dark"
             android:textSize="24sp" />
+
 
         <TextView
             android:id="@+id/previousItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/item1"
+            android:fontFamily="@font/cinzel"
+            android:textColor="@android:color/background_dark"
             android:textSize="18sp" />
 
         <TextView
@@ -182,6 +211,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/date1"
+            android:fontFamily="@font/cinzel"
+            android:textColor="@android:color/background_dark"
             android:textSize="18sp" />
 
         <TextView
@@ -189,6 +220,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/email1"
+            android:fontFamily="@font/cinzel"
+            android:textColor="@android:color/background_dark"
             android:textSize="18sp" />
     </LinearLayout>
 
@@ -209,12 +242,16 @@
             android:id="@+id/blank"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/cinzel"
+            android:textColor="@android:color/background_dark"
             android:textSize="24sp" />
 
         <TextView
             android:id="@+id/previousQuantity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/cinzel"
+            android:textColor="@android:color/background_dark"
             android:text="@string/quantity1"
             android:textSize="18sp" />
 
@@ -223,6 +260,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/phoneNumber1"
+            android:fontFamily="@font/cinzel"
+            android:textColor="@android:color/background_dark"
             android:textSize="18sp" />
 
         <TextView
@@ -230,6 +269,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/address1"
+            android:fontFamily="@font/cinzel"
+            android:textColor="@android:color/background_dark"
             android:textSize="18sp" />
     </LinearLayout>
 

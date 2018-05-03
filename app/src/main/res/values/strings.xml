@@ -39,4 +39,9 @@
     <string name="signup">Sign Up</string>
     <string name="makeaccount">Don\'t have an account?</string>
     <string name="welcome_text">Welcome to VeGETables</string>
+    <string name="storeemail">Store Contact Email:</string>
+    <string name="storecontact">Store Contact Name:</string>
+    <string name="storephonenumber">Store Phone Number:</string>
+    <string name="storeaddress">Store Address:</string>
+    <string name="storename">Store Name:</string>
 </resources>
