@@ -15,6 +15,8 @@
         android:text="Item Name"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:fontFamily="@font/cinzel"
+        android:textColor="@android:color/background_dark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,6 +28,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:ems="10"
+        android:fontFamily="@font/cinzel"
+        android:textColor="@android:color/background_dark"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,6 +44,8 @@
         android:text="@string/quantity"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:fontFamily="@font/cinzel"
+        android:textColor="@android:color/background_dark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/enterItemName" />
 
@@ -49,6 +55,8 @@
         android:layout_height="36dp"
         android:ems="10"
         android:inputType="number"
+        android:fontFamily="@font/cinzel"
+        android:textColor="@android:color/background_dark"
         app:layout_constraintStart_toStartOf="@+id/quantity"
         app:layout_constraintTop_toBottomOf="@+id/quantity" />
 
@@ -62,6 +70,8 @@
         android:text="@string/addNewItem"
         android:textSize="30sp"
         android:textStyle="bold"
+        android:fontFamily="@font/cinzel"
+        android:textColor="@android:color/background_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -73,7 +83,8 @@
         android:layout_marginBottom="228dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-
+        android:fontFamily="@font/cinzel"
+        android:textColor="@android:color/background_dark"
         android:layout_marginTop="8dp"
         android:text="@string/addItemButton"
         android:textSize="18sp"
