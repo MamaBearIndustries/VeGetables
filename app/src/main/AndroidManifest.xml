@@ -28,7 +28,8 @@
         <activity android:name=".GroceryStoreSignUp" />
         <activity android:name=".Sign_In" />
         <activity android:name=".GroceryStore_Or_FoodPanty" />
-        <activity android:name=".FoodPantrySignUp"></activity>
+        <activity android:name=".FoodPantrySignUp" />
+        <activity android:name=".RequestActivity"></activity>
     </application>
 
 </manifest>
