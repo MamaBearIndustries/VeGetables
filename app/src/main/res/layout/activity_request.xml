@@ -4,6 +4,162 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mamabearindustries.vegetables.RequestActivity">
+    tools:context="com.mamabearindustries.vegetables.RequestActivity"
+    tools:layout_editor_absoluteY="25dp">
 
+    <TextView
+        android:id="@+id/request_Title"
+        android:layout_width="331dp"
+        android:layout_height="81dp"
+        android:fontFamily="@font/cinzel"
+        android:text="Information"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="36sp"
+        tools:layout_editor_absoluteX="134dp"
+        tools:layout_editor_absoluteY="35dp" />
+
+    <TextView
+        android:id="@+id/request_name"
+        android:layout_width="336dp"
+        android:layout_height="47dp"
+        android:fontFamily="@font/cinzel"
+        android:text="Contact Name"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="162dp" />
+
+    <TextView
+        android:id="@+id/request_address"
+        android:layout_width="336dp"
+        android:layout_height="47dp"
+        android:fontFamily="@font/cinzel"
+        android:text="Contact Address"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="263dp" />
+
+    <TextView
+        android:id="@+id/request_phone_num"
+        android:layout_width="336dp"
+        android:layout_height="47dp"
+        android:fontFamily="@font/cinzel"
+        android:text="Contact Number"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="488dp" />
+
+    <TextView
+        android:id="@+id/request_contact_email"
+        android:layout_width="336dp"
+        android:layout_height="47dp"
+        android:fontFamily="@font/cinzel"
+        android:text="Contact Email"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="373dp" />
+
+    <TextView
+        android:id="@+id/request_name_text"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:fontFamily="@font/cinzel"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="207dp" />
+
+    <TextView
+        android:id="@+id/request_address_text"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:fontFamily="@font/cinzel"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteY="309dp" />
+
+    <TextView
+        android:id="@+id/request_contact_email_text"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:fontFamily="@font/cinzel"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteY="420dp" />
+
+    <TextView
+        android:id="@+id/request_contact_number_text"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:fontFamily="@font/cinzel"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteY="533dp" />
+
+    <TextView
+        android:id="@+id/request_food_name"
+        android:layout_width="336dp"
+        android:layout_height="47dp"
+        android:fontFamily="@font/cinzel"
+        android:text="Food Name"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="592dp" />
+
+    <TextView
+        android:id="@+id/request_food_name2"
+        android:layout_width="336dp"
+        android:layout_height="47dp"
+        android:fontFamily="@font/cinzel"
+        android:text="Food Name"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="592dp" />
+
+    <TextView
+        android:id="@+id/request_food_name_text"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:fontFamily="@font/cinzel"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteY="638dp" />
+
+    <TextView
+        android:id="@+id/request_food_quantity"
+        android:layout_width="336dp"
+        android:layout_height="47dp"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/cinzel"
+        android:text="Food Quantity"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteY="701dp" />
+
+    <TextView
+        android:id="@+id/request_food_number_text"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:fontFamily="@font/cinzel"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="748dp" />
+
+    <Button
+        android:id="@+id/makeRequest_button"
+        android:layout_width="205dp"
+        android:layout_height="63dp"
+        android:text="Request"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="811dp" />
 </android.support.constraint.ConstraintLayout>
