@@ -5,108 +5,98 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.mamabearindustries.vegetables.Pantry_Search_Screen"
-    tools:layout_editor_absoluteY="89dp">
+    tools:layout_editor_absoluteY="25dp">
 
     <TextView
         android:id="@+id/search_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="45dp"
         android:layout_marginStart="25dp"
         android:fontFamily="casual"
         android:text="Search Food"
         android:textAlignment="center"
         android:textColor="?attr/actionModeSplitBackground"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/search_sub_text"
-        app:layout_constraintStart_toEndOf="@+id/search_sub_text" />
+        app:layout_constraintBottom_toTopOf="@+id/searchView"
+        app:layout_constraintStart_toEndOf="@+id/search_sub_text"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/search_sub_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="6dp"
+        android:layout_marginBottom="325dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="71dp"
         android:fontFamily="serif"
         android:text="Search Food Item:"
         android:textColor="@android:color/background_dark"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/searchView"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/storesScrolling"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/search_sub_text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="6dp"
+        android:layout_marginStart="5dp"
         android:fontFamily="serif"
         android:text="Grocery Store Inventory:"
         android:textColor="@android:color/background_dark"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/item_1"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
 
     <SearchView
         android:id="@+id/searchView"
-        android:layout_width="594dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="533dp"
-        android:layout_marginTop="114dp"
+        android:layout_width="601dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="102dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginStart="7dp"
         android:background="@color/colorPrimary"
         android:queryHint="Search Here"
-        app:layout_constraintBottom_toTopOf="@+id/button_request"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <CheckBox
-        android:id="@+id/item_2"
-        android:layout_width="431dp"
-        android:layout_height="75dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="CheckBox"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/item_3"
+        app:layout_constraintBottom_toTopOf="@+id/search_sub_text2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/item_3"
-        android:layout_width="433dp"
-        android:layout_height="75dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="CheckBox"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_request"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/item_1"
-        android:layout_width="432dp"
-        android:layout_height="75dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="CheckBox"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/item_2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_title" />
 
     <Button
         android:id="@+id/button_request"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="49dp"
+        android:layout_marginBottom="16dp"
         android:text="Request"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/storesScrolling" />
+
+    <ScrollView
+        android:id="@+id/storesScrolling"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="185dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_sub_text">
+
+        <LinearLayout
+            android:id="@+id/list_of_stores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="27dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/search_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </ScrollView>
 
     <Button
         android:id="@+id/FoodPantryOrders"
