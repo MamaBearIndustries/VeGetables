@@ -32,7 +32,9 @@ public class Sign_In extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
+/*
+Make it add to existing
+ */
         sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,7 +61,6 @@ public class Sign_In extends AppCompatActivity {
 
                                 }
                             });
-
                 }
                 else if(GroceryStoreSignUp.myGroceryStore!=null)
                 {
@@ -72,7 +73,7 @@ public class Sign_In extends AppCompatActivity {
                                     {
                                         if(stores.child("Info").child("Username").getValue(String.class).equals(username.getText().toString())&&stores.child("Info").child("Password").getValue(String.class).equals(password.getText().toString()))
                                         {
-                                            Toast.makeText(Sign_In.this,username.getText(),Toast.LENGTH_SHORT).show();
+                                            //Toast.makeText(Sign_In.this,username.getText(),Toast.LENGTH_SHORT).show();
                                             Intent i = new Intent(
                                                     Sign_In.this, CurrentInventory.class);
                                             startActivity(i);
@@ -93,6 +94,5 @@ public class Sign_In extends AppCompatActivity {
                 }
             }
         });
-
     }
 }
