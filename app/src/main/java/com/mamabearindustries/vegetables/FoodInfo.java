@@ -6,16 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class FoodInfo extends AppCompatActivity {
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -28,7 +24,7 @@ public class FoodInfo extends AppCompatActivity {
 
        final EditText itemNameText = findViewById(R.id.enterItemName);
       final  EditText quantityText = findViewById(R.id.enterQuantity);
-      final  Button additem = findViewById(R.id.addItemButton);
+      final Button additem = findViewById(R.id.addItemButton2);
 
         additem.setOnClickListener(new View.OnClickListener() {
             @Override

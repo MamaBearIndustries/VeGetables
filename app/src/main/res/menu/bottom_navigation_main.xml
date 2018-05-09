@@ -6,18 +6,25 @@
     <item
         android:id="@+id/action_add"
         anroid:enabled="true"
-        android:icon="@drawable/ic_currentorders"
-        android:title="Orders"
+        android:icon="@drawable/ic_add"
+        android:title="Add"
         app:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/action_edit"
         anroid:enabled="true"
-        android:icon="@drawable/ic_foodsearch"
-        android:title="Search"
+        android:icon="@drawable/ic_edit"
+        android:title="Edit"
         app:showAsAction="ifRoom"/>
 
-    </menu>
+    <item
+        android:id="@+id/action_remove"
+        anroid:enabled="true"
+        android:icon="@drawable/ic_remove"
+        android:title="Remove"
+        app:showAsAction="ifRoom"/>
 
 
 
+
+</menu>

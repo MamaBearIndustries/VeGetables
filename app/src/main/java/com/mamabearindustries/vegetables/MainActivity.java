@@ -26,12 +26,16 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch(item.getItemId()) {
+                switch(item.getItemId())
+                {
                     case R.id.action_add:
-                        Toast.makeText(MainActivity.this, "Orders Clicked", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Action Add Clicked", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.action_edit:
-                        Toast.makeText(MainActivity.this, "Search Food Clicked", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Action Edit Clicked", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_remove:
+                        Toast.makeText(MainActivity.this, "Action Remove Clicked", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 return true;

@@ -51,7 +51,7 @@ private int counter = 0;
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(
-                        Pantry_Search_Screen.this, Sign_In.class);
+                        Pantry_Search_Screen.this, RequestActivity.class);
                 startActivity(i);
             }
         };

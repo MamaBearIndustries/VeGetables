@@ -1,15 +1,14 @@
 package com.mamabearindustries.vegetables;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -22,7 +21,7 @@ public class CurrentInventory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_current_inventory);
         final LinearLayout list_of_items = findViewById(R.id.list_of_items);
-         final Button addItem = findViewById(R.id.addItemButton);
+        Button addItemScreen = findViewById(R.id.addItemScreen);
 
        // final Typeface cinzel = Typeface.createFromAsset(getAssets(),"fonts/cinzel.ttf");
 
@@ -50,10 +49,11 @@ public class CurrentInventory extends AppCompatActivity {
                 });
 
 
-        addItem.setOnClickListener(new View.OnClickListener() {
+        addItemScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+             //   Toast.makeText(CurrentInventory.this,"HE",Toast.LENGTH_SHORT).show();
                 //addItems(list_of_items);
                Intent i = new Intent(CurrentInventory.this, FoodInfo.class);
                 startActivity(i);

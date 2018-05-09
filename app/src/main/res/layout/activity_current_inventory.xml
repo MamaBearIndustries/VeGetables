@@ -11,9 +11,9 @@
         android:id="@+id/scroll_view"
         android:layout_width="601dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginTop="58dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/addItemScreen"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/item_quanitity_title">
@@ -26,17 +26,6 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/addItemButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/cinzel"
-            android:text="@string/addNewItem"
-            android:textColor="@android:color/background_dark"
-            android:textSize="14sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/scroll_view" />
     </ScrollView>
 
     <TextView
@@ -94,6 +83,16 @@
         app:layout_constraintEnd_toEndOf="@+id/scroll_view"
         app:layout_constraintTop_toTopOf="@+id/item_name_title"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/addItemScreen"
+        android:layout_width="151dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="16dp"
+        android:text="Add Item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
