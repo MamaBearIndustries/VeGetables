@@ -1,9 +1,11 @@
 package com.mamabearindustries.vegetables;
 
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
 
 public class AcceptActivity extends AppCompatActivity {
 
@@ -24,6 +26,8 @@ public class AcceptActivity extends AppCompatActivity {
         TextView pastPhone = findViewById(R.id.previousPhoneNumber);
         TextView pastQuantity = findViewById(R.id.previousQuantity);
         TextView pastItem = findViewById(R.id.previousItem);
+
+
 
 
     }
