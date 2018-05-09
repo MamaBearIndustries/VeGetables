@@ -1,32 +1,26 @@
 package com.mamabearindustries.vegetables;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toolbar;
+
 
 public class AcceptActivity extends AppCompatActivity {
 
-    private DrawerLayout mDrawerLayout;
+    //private DrawerLayout mDrawerLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accept);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        /*Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setHomeAsUpIndicator(R.drawable.ic_currentinventory);
+        actionBar.setHomeAsUpIndicator(R.drawable.ic_requests);
 
         mDrawerLayout = findViewById(R.id.drawer_layout);
         mDrawerLayout.addDrawerListener(
@@ -61,10 +55,10 @@ public class AcceptActivity extends AppCompatActivity {
                 mDrawerLayout.closeDrawers();
                 return true;
             }
-        });
+        });*/
     }
 
-    private void setSupportActionBar(Toolbar toolbar)
+    /*private void setSupportActionBar(Toolbar toolbar)
     {
     }
 
@@ -78,7 +72,7 @@ public class AcceptActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
-    }
+    }*/
     public void previousRequest(View v)
     {
         TextView pastFoodPantry = findViewById(R.id.previousFoodPantry);
