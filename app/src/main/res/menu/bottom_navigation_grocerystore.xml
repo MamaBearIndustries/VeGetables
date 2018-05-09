@@ -3,21 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:anroid="http://schemas.android.com/tools">
 
+    <group android:checkableBehavior="single">
+
     <item
         android:id="@+id/action_add"
         anroid:enabled="true"
-        android:icon="@drawable/ic_currentorders"
-        android:title="Orders"
+        android:icon="@drawable/ic_currentinventory"
+        android:title="Current Inventory"
         app:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/action_edit"
         anroid:enabled="true"
-        android:icon="@drawable/ic_foodsearch"
-        android:title="Search"
+        android:icon="@drawable/ic_requests"
+        android:title="Requests"
         app:showAsAction="ifRoom"/>
 
-    </menu>
+    </group>
 
 
 
+
+</menu>
