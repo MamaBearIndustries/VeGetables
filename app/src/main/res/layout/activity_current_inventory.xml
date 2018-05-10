@@ -7,34 +7,11 @@
     tools:context="com.mamabearindustries.vegetables.CurrentInventory"
     tools:layout_editor_absoluteY="25dp">
 
-    <ScrollView
-        android:id="@+id/scroll_view"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="62dp"
-        android:layout_marginTop="58dp"
-        app:layout_constraintBottom_toBottomOf="@+id/addItemScreen"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/item_name_title">
-
-        <LinearLayout
-            android:id="@+id/list_of_items"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-        </LinearLayout>
-
-    </ScrollView>
-
     <TextView
         android:id="@+id/currentInventory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/cinzel"
         android:text="@string/currentInventory"
@@ -43,8 +20,7 @@
         app:layout_constraintBottom_toTopOf="@+id/item_name_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.542" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
@@ -52,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="97dp"
+        android:layout_marginTop="104dp"
         android:fontFamily="@font/cinzel"
         android:text="Item Name:"
         android:textColor="@android:color/background_dark"
@@ -70,18 +46,41 @@
         android:text="Item Quantity:"
         android:textColor="@android:color/background_dark"
         android:textSize="28sp"
-        app:layout_constraintEnd_toEndOf="@+id/scroll_view"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/currentInventory" />
 
     <Button
         android:id="@+id/addItemScreen"
         android:layout_width="151dp"
         android:layout_height="54dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="112dp"
         android:text="Add Item"
+        app:layout_constraintBottom_toTopOf="@+id/scroll_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentInventory" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="522dp"
+        android:layout_marginBottom="9dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/list_of_items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </ScrollView>
 
 
 </android.support.constraint.ConstraintLayout>
