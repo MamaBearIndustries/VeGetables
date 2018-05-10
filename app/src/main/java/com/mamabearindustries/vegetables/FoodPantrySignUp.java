@@ -1,6 +1,7 @@
 package com.mamabearindustries.vegetables;
 
 import android.content.Intent;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,7 @@ import java.util.Map;
 public class FoodPantrySignUp extends AppCompatActivity {
     static FoodPantry myFoodPantry;
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    String m_androidId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,20 +40,50 @@ public class FoodPantrySignUp extends AppCompatActivity {
                 myFoodPantry = new FoodPantry(pantry_name.getText().toString(),pantry_address.getText().toString(),pantry_phoneNumber.getText().toString(),pantry_contactName.getText().toString(),pantry_contactEmail.getText().toString(),pantry_username.getText().toString(),pantry_password.getText().toString());
                 final DatabaseReference pantries = database.getReference().child("FoodPantries").child(myFoodPantry.getPantryName()).child("Info");
 
-                Map<String, Object> storeInfo = new HashMap<>();
-                storeInfo.put("Address", myFoodPantry.getAddress());
-                storeInfo.put("Phone Number", myFoodPantry.getPhoneNumber());
-                storeInfo.put("Contact Name", myFoodPantry.getContactName());
-                storeInfo.put("Contact Email", myFoodPantry.getContactEmail());
-                storeInfo.put("Username", myFoodPantry.getUsername());
-                storeInfo.put("Password", myFoodPantry.getPassword());
+                Map<String, Object> pantryInfo = new HashMap<>();
+                pantryInfo.put("Address", myFoodPantry.getAddress());
+                pantryInfo.put("PhoneNumber", myFoodPantry.getPhoneNumber());
+                pantryInfo.put("ContactName", myFoodPantry.getContactName());
+                pantryInfo.put("ContactEmail", myFoodPantry.getContactEmail());
+                pantryInfo.put("Username", myFoodPantry.getUsername());
+                pantryInfo.put("Password", myFoodPantry.getPassword());
 
-                pantries.updateChildren(storeInfo);
+                pantries.updateChildren(pantryInfo);
+
+                final DatabaseReference specificPantry = database.getReference().child("PantryIds").child(getId()).child("Info");
+
+                Map<String, Object> pantryIDInfo = new HashMap<>();
+                pantryIDInfo.put("Address", myFoodPantry.getAddress());
+                pantryIDInfo.put("PhoneNumber", myFoodPantry.getPhoneNumber());
+                pantryIDInfo.put("ContactName", myFoodPantry.getContactName());
+                pantryIDInfo.put("ContactEmail", myFoodPantry.getContactEmail());
+                pantryIDInfo.put("Username", myFoodPantry.getUsername());
+                pantryIDInfo.put("Password", myFoodPantry.getPassword());
+                pantryIDInfo.put("Name",myFoodPantry.getPantryName());
+
+
+
+
+                specificPantry.updateChildren(pantryIDInfo);
+
 
                 Intent i = new Intent(
                         FoodPantrySignUp.this, Sign_In.class);
                 startActivity(i);
             }
         });
+    }
+    public String getId()
+    {
+        try {
+
+            m_androidId = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
+
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+        return m_androidId;
     }
 }
