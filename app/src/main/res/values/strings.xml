@@ -43,7 +43,7 @@
     <string name="storecontact">Store Contact Name:</string>
     <string name="storephonenumber">Store Phone Number:</string>
     <string name="storeaddress">Store Address:</string>
-    <string name="storename">Store Name:</string>
+    <string name="storename">Store Name</string>
     <string name="gvss">Are You a Food Pantry or a Grocery Store?</string>
     <string name="grocerystore">Grocery Store</string>
     <string name="foodpantry">Food Pantry</string>
