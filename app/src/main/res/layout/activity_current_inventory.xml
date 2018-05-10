@@ -9,14 +9,14 @@
 
     <ScrollView
         android:id="@+id/scroll_view"
-        android:layout_width="601dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="62dp"
         android:layout_marginTop="58dp"
-        app:layout_constraintBottom_toTopOf="@+id/addItemScreen"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/item_quanitity_title">
+        app:layout_constraintBottom_toBottomOf="@+id/addItemScreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/item_name_title">
 
         <LinearLayout
             android:id="@+id/list_of_items"
@@ -29,60 +29,49 @@
     </ScrollView>
 
     <TextView
-        android:id="@+id/inventory"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/cinzel"
-        android:text="@string/inventory"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/background_dark"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/currentInventory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/cinzel"
         android:text="@string/currentInventory"
         android:textColor="@android:color/background_dark"
         android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inventory" />
+        app:layout_constraintBottom_toTopOf="@+id/item_name_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.542" />
 
 
     <TextView
         android:id="@+id/item_name_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="97dp"
         android:fontFamily="@font/cinzel"
         android:text="Item Name:"
         android:textColor="@android:color/background_dark"
         android:textSize="28sp"
-        app:layout_constraintStart_toStartOf="@+id/currentInventory"
-        app:layout_constraintTop_toBottomOf="@+id/currentInventory" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/item_quanitity_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="76dp"
+        android:layout_marginEnd="74dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/cinzel"
         android:text="Item Quantity:"
         android:textColor="@android:color/background_dark"
         android:textSize="28sp"
-        app:layout_constraintBottom_toBottomOf="@+id/item_name_title"
         app:layout_constraintEnd_toEndOf="@+id/scroll_view"
-        app:layout_constraintTop_toTopOf="@+id/item_name_title"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/currentInventory" />
 
     <Button
         android:id="@+id/addItemScreen"
@@ -91,8 +80,8 @@
         android:layout_marginBottom="16dp"
         android:text="Add Item"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
