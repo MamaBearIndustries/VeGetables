@@ -96,7 +96,27 @@ private int counter = 0;
 
                                                       storeNames.add(stores.getKey());
 
-                                                        addCards(list_of_stores,stores.getKey(),food,items.getValue(Integer.class));
+                                                          String val = String.valueOf(items.getValue(Integer.class));
+
+
+                                                          addCards(list_of_stores,stores.getKey(),food,val);
+                                                      /*
+                                                          if(val!=null)
+
+                                                          {
+
+
+                                                              Toast.makeText(Pantry_Search_Screen.this,"Not Null",Toast.LENGTH_SHORT).show();
+                                                              Toast.makeText(Pantry_Search_Screen.this,String.valueOf(val),Toast.LENGTH_SHORT).show();
+                                                          }
+                                                          else
+                                                          {
+                                                              Toast.makeText(Pantry_Search_Screen.this,"Null",Toast.LENGTH_SHORT).show();
+                                                          }
+
+                                                               */
+                                                        //Toast.makeText(Pantry_Search_Screen.this,Integer.valueOf(items.getValue(Integer.class)),Toast.LENGTH_SHORT).show();
+
 
                                       //Get updated list of possible stores
                                       /*  for (CheckBox checkBox : checkBoxes) {
@@ -138,7 +158,7 @@ private int counter = 0;
     }
    static GroceryStore availableStore;
     static Food foodRequested;
-    public void addCards(LinearLayout list_of_stores, final String name_of_store, final String name_of_food, final Integer amountOfFood) {
+    public void addCards(LinearLayout list_of_stores, final String name_of_store, final String name_of_food, final String amountOfFood) {
 
     /*    Button testy = new Button(this);
         testy.setBackgroundColor(Color.WHITE);
@@ -176,7 +196,7 @@ private int counter = 0;
         itemsinfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Pantry_Search_Screen.this,"Clicked",Toast.LENGTH_SHORT).show();
+               // Toast.makeText(Pantry_Search_Screen.this,"Clicked",Toast.LENGTH_SHORT).show();
 
                 FirebaseDatabase.getInstance().getReferenceFromUrl("https://vegetables-1107.firebaseio.com/GroceryStores").
                         addListenerForSingleValueEvent(new ValueEventListener() {
@@ -186,12 +206,14 @@ private int counter = 0;
                                 {
                                     if(individualStore.getKey().equals(name_of_store))
                                     {
-                                        Toast.makeText(Pantry_Search_Screen.this,"Made it",Toast.LENGTH_SHORT).show();
+                                       // Toast.makeText(Pantry_Search_Screen.this,"Made it",Toast.LENGTH_SHORT).show();
 
                                         availableStore = new GroceryStore(name_of_store,individualStore.child("Info").child("Address").getValue(String.class),individualStore.child("Info").child("Phone Number").getValue(String.class),individualStore.child("Info").child("Contact Name").getValue(String.class),individualStore.child("Info").child("Contact Email").getValue(String.class),individualStore.child("Info").child("Username").getValue(String.class),individualStore.child("Info").child("Password").getValue(String.class));
-                                         foodRequested = new Food(name_of_food,amountOfFood);
+                                        foodRequested = new Food(name_of_food,Integer.valueOf(amountOfFood));
+                                        Toast.makeText(Pantry_Search_Screen.this,String.valueOf(foodRequested.getQuantity()),Toast.LENGTH_SHORT).show();
 
                                         Intent i = new Intent( Pantry_Search_Screen.this, RequestActivity.class);
+
                                            startActivity(i);
                                     }
                                 }
@@ -218,8 +240,6 @@ private int counter = 0;
 
 
         list_of_stores.addView(itemsinfo);
-
-
 
 
 

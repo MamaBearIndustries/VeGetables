@@ -1,6 +1,7 @@
 package com.mamabearindustries.vegetables;
 
 import android.content.Intent;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,7 @@ import java.util.Map;
 public class GroceryStoreSignUp extends AppCompatActivity {
  static GroceryStore myGroceryStore;
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private String m_androidId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,11 +50,43 @@ public class GroceryStoreSignUp extends AppCompatActivity {
 
                 stores.updateChildren(store_grocery_info);
 
+
+                final DatabaseReference specificStore = database.getReference().child("StoreIds").child(getId()).child("Info");
+
+                Map<String, Object> store_ID_grocery_info = new HashMap<>();
+                store_ID_grocery_info.put("Address", myGroceryStore.getAddress());
+                store_ID_grocery_info.put("PhoneNumber", myGroceryStore.getPhoneNumber());
+                store_ID_grocery_info.put("ContactName", myGroceryStore.getContactName());
+                store_ID_grocery_info.put("ContactEmail", myGroceryStore.getContactEmail());
+                store_ID_grocery_info.put("Username", myGroceryStore.getUsername());
+                store_ID_grocery_info.put("Password", myGroceryStore.getPassword());
+                store_ID_grocery_info.put("Name",myGroceryStore.getStoreName());
+
+                specificStore.updateChildren(store_ID_grocery_info);
+
+
+
+
+
+
                 Intent i = new Intent(
                         GroceryStoreSignUp.this, Sign_In.class);
                 startActivity(i);
             }
         });
 
+    }
+    public String getId()
+    {
+        try {
+
+            m_androidId = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
+
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+        return m_androidId;
     }
 }
