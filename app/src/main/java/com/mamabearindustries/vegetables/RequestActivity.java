@@ -51,8 +51,8 @@ public class RequestActivity extends AppCompatActivity {
         i.setType("message/rfc822");
         i.putExtra(Intent.EXTRA_EMAIL  , new String[]{storeEmail});
         i.putExtra(Intent.EXTRA_SUBJECT, "Please donate to" + FoodPantrySignUp.myFoodPantry.getPantryName());
-        i.putExtra(Intent.EXTRA_TEXT   , "Hello" + contactName + ", \n On behalf of " + FoodPantrySignUp.myFoodPantry.getPantryName() + ", I would like to ask you to donate to our food pantry. We are in need of " + foodrequested +" and through VeGetables, we saw that you have " + amountRequested + " available. Please contact us if you can donate. Our email is available above. \n Pantry Name: "
-        + FoodPantrySignUp.myFoodPantry.getPantryName() + "\n Pantry Address:" + FoodPantrySignUp.myFoodPantry.getAddress() + "\n Food Pantry Phone Number" + FoodPantrySignUp.myFoodPantry.getPhoneNumber() + "Thanks, \n"+ FoodPantrySignUp.myFoodPantry.getContactName()+"\n \n This email was sent through the VeGetables App");
+        i.putExtra(Intent.EXTRA_TEXT   , "Hello " + contactName + ", \n On behalf of " + FoodPantrySignUp.myFoodPantry.getPantryName() + ", I would like to ask you to donate to our food pantry. We are in need of " + foodrequested +" and through VeGetables, we saw that you have " + amountRequested + " available. Please contact us if you can donate. Our email is available above. \n\n Below is our information: \n\n Pantry Name: "
+        + FoodPantrySignUp.myFoodPantry.getPantryName() + "\n Pantry Address:" + FoodPantrySignUp.myFoodPantry.getAddress() + "\n Food Pantry Phone Number: " + FoodPantrySignUp.myFoodPantry.getPhoneNumber() + " \n\n Thanks, \n"+ FoodPantrySignUp.myFoodPantry.getContactName()+"\n \n This email was sent through the VeGetables App");
         try {
             startActivity(Intent.createChooser(i, "Send mail..."));
             Toast.makeText(RequestActivity.this,"Please go into your email app to send",Toast.LENGTH_SHORT).show();
