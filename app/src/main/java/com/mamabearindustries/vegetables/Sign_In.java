@@ -48,6 +48,7 @@ Make it add to existing
         sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if(FoodPantrySignUp.myFoodPantry!=null)
                 {
                     FirebaseDatabase.getInstance().getReferenceFromUrl("https://vegetables-1107.firebaseio.com/FoodPantries")
@@ -128,7 +129,6 @@ Make it add to existing
                 {
                     GroceryStoreSignUp.myGroceryStore = new GroceryStore(dataSnapshot.child("Name").getValue(String.class),dataSnapshot.child("Address").getValue(String.class),dataSnapshot.child("ContactName").getValue(String.class),dataSnapshot.child("ContactEmail").getValue(String.class),dataSnapshot.child("Username").getValue(String.class),dataSnapshot.child("Password").getValue(String.class),dataSnapshot.child("Name").getValue(String.class));
 
-                    // GroceryStoreSignUp.myGroceryStore = new GroceryStore();
 
                 }
             }
