@@ -91,7 +91,7 @@ public class CurrentInventory extends AppCompatActivity {
         TextView itemname = new TextView(this);
         itemname.setText("Item Name:");
         itemname.setMinWidth(100);
-        itemname.setTextSize(25);
+        itemname.setTextSize(18);
         //itemname.setTypeface(cinzel);
         itemname.setPadding(20,0,20,0);
         itemsinfo.addView(itemname);
@@ -99,7 +99,7 @@ public class CurrentInventory extends AppCompatActivity {
         TextView name_of_item = new TextView(this);
         name_of_item.setText(itemName);
         name_of_item.setMinWidth(100);
-        name_of_item.setTextSize(25);
+        name_of_item.setTextSize(18);
         //name_of_item.setTypeface(cinzel);
         name_of_item.setPadding(0,0,20,0);
         itemsinfo.addView(name_of_item);
@@ -107,7 +107,7 @@ public class CurrentInventory extends AppCompatActivity {
         TextView itemquantity = new TextView(this);
         itemquantity.setText("Item Quantity:");
         itemquantity.setMinWidth(100);
-        itemquantity.setTextSize(25);
+        itemquantity.setTextSize(18);
         //itemquantity.setTypeface(cinzel);
         itemquantity.setPadding(0,0,20,0);
         itemsinfo.addView(itemquantity);
@@ -116,7 +116,7 @@ public class CurrentInventory extends AppCompatActivity {
         quantity_of_item.setText(itemQuantity);
         quantity_of_item.setMinWidth(100);
         //quantity_of_item.setTypeface(cinzel);
-        quantity_of_item.setTextSize(25);
+        quantity_of_item.setTextSize(18);
         itemsinfo.addView(quantity_of_item);
 
         itemsinfo.setPadding(0,20,0,20);
