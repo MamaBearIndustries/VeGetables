@@ -67,8 +67,8 @@
 
     <ScrollView
         android:id="@+id/storesScrolling"
-        android:layout_width="595dp"
-        android:layout_height="611dp"
+        android:layout_width="599dp"
+        android:layout_height="632dp"
         android:layout_marginBottom="10dp"
         android:layout_marginEnd="4dp"
         android:layout_marginStart="4dp"
