@@ -210,7 +210,7 @@ private int counter = 0;
 
                                         availableStore = new GroceryStore(name_of_store,individualStore.child("Info").child("Address").getValue(String.class),individualStore.child("Info").child("Phone Number").getValue(String.class),individualStore.child("Info").child("Contact Name").getValue(String.class),individualStore.child("Info").child("Contact Email").getValue(String.class),individualStore.child("Info").child("Username").getValue(String.class),individualStore.child("Info").child("Password").getValue(String.class));
                                         foodRequested = new Food(name_of_food,Integer.valueOf(amountOfFood));
-                                        Toast.makeText(Pantry_Search_Screen.this,String.valueOf(foodRequested.getQuantity()),Toast.LENGTH_SHORT).show();
+                                        //Toast.makeText(Pantry_Search_Screen.this,String.valueOf(foodRequested.getQuantity()),Toast.LENGTH_SHORT).show();
 
                                         Intent i = new Intent( Pantry_Search_Screen.this, RequestActivity.class);
 
