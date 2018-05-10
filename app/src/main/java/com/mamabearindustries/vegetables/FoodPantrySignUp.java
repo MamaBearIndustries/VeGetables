@@ -40,9 +40,9 @@ public class FoodPantrySignUp extends AppCompatActivity {
 
                 Map<String, Object> storeInfo = new HashMap<>();
                 storeInfo.put("Address", myFoodPantry.getAddress());
-                storeInfo.put("Phone Number", myFoodPantry.getPhoneNumber());
-                storeInfo.put("Contact Name", myFoodPantry.getContactName());
-                storeInfo.put("Contact Email", myFoodPantry.getContactEmail());
+                storeInfo.put("PhoneNumber", myFoodPantry.getPhoneNumber());
+                storeInfo.put("ContactName", myFoodPantry.getContactName());
+                storeInfo.put("ContactEmail", myFoodPantry.getContactEmail());
                 storeInfo.put("Username", myFoodPantry.getUsername());
                 storeInfo.put("Password", myFoodPantry.getPassword());
 

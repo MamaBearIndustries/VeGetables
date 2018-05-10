@@ -40,9 +40,9 @@ public class GroceryStoreSignUp extends AppCompatActivity {
 
                 Map<String, Object> store_grocery_info = new HashMap<>();
                 store_grocery_info.put("Address", myGroceryStore.getAddress());
-                store_grocery_info.put("Phone Number", myGroceryStore.getPhoneNumber());
-                store_grocery_info.put("Contact Name", myGroceryStore.getContactName());
-                store_grocery_info.put("Contact Email", myGroceryStore.getContactEmail());
+                store_grocery_info.put("PhoneNumber", myGroceryStore.getPhoneNumber());
+                store_grocery_info.put("ContactName", myGroceryStore.getContactName());
+                store_grocery_info.put("ContactEmail", myGroceryStore.getContactEmail());
                 store_grocery_info.put("Username", myGroceryStore.getUsername());
                 store_grocery_info.put("Password", myGroceryStore.getPassword());
 

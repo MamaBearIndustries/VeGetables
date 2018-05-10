@@ -6,6 +6,7 @@ package com.mamabearindustries.vegetables;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Parcelable;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -38,6 +39,7 @@ private int counter = 0;
     private ArrayList<String> storeNames = new ArrayList<>();
     DatabaseReference gStores = database.getReference("Message");
     static String pantryName = "Test Pantry Name";
+    static Request makeRequest;
     private View.OnClickListener getStoreInfo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,7 +96,7 @@ private int counter = 0;
 
                                                       storeNames.add(stores.getKey());
 
-                                                        addCards(list_of_stores,stores.getKey());
+                                                        addCards(list_of_stores,stores.getKey(),food,items.getValue(Integer.class));
 
                                       //Get updated list of possible stores
                                       /*  for (CheckBox checkBox : checkBoxes) {
@@ -134,25 +136,86 @@ private int counter = 0;
 
 
     }
+   static GroceryStore availableStore;
+    static Food foodRequested;
+    public void addCards(LinearLayout list_of_stores, final String name_of_store, final String name_of_food, final Integer amountOfFood) {
 
-    public void addCards(LinearLayout list_of_stores, String name_of_store) {
+    /*    Button testy = new Button(this);
+        testy.setBackgroundColor(Color.WHITE);
+        testy.setElevation(10);
 
-        CardView itemsinfo = new CardView(this);
+        testy.setPadding(0,2,0,2);
+        testy.setMinimumHeight(30);
+        testy.setText(name_of_store);
+        testy.setTextColor(Color.BLACK);
+        testy.setTextSize(25);
+
+        testy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });*/
+
+      CardView itemsinfo = new CardView(this);
         itemsinfo.setCardBackgroundColor(Color.WHITE);
         itemsinfo.setCardElevation(10);
         itemsinfo.setRadius(3);
         itemsinfo.setPadding(0,2,0,2);
         itemsinfo.setMinimumHeight(30);
 
-        TextView singleCard = new TextView(this);
+    TextView singleCard = new TextView(this);
         singleCard.setText(name_of_store);
         singleCard.setTextColor(Color.BLACK);
         singleCard.setTextSize(25);
 
 
-        itemsinfo.addView(singleCard);
+       itemsinfo.addView(singleCard);
 
-        itemsinfo.setOnClickListener(getStoreInfo);
+
+        itemsinfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(Pantry_Search_Screen.this,"Clicked",Toast.LENGTH_SHORT).show();
+
+                FirebaseDatabase.getInstance().getReferenceFromUrl("https://vegetables-1107.firebaseio.com/GroceryStores").
+                        addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+                                for(DataSnapshot individualStore : dataSnapshot.getChildren())
+                                {
+                                    if(individualStore.getKey().equals(name_of_store))
+                                    {
+                                        Toast.makeText(Pantry_Search_Screen.this,"Made it",Toast.LENGTH_SHORT).show();
+
+                                        availableStore = new GroceryStore(name_of_store,individualStore.child("Info").child("Address").getValue(String.class),individualStore.child("Info").child("Phone Number").getValue(String.class),individualStore.child("Info").child("Contact Name").getValue(String.class),individualStore.child("Info").child("Contact Email").getValue(String.class),individualStore.child("Info").child("Username").getValue(String.class),individualStore.child("Info").child("Password").getValue(String.class));
+                                         foodRequested = new Food(name_of_food,amountOfFood);
+
+                                        Intent i = new Intent( Pantry_Search_Screen.this, RequestActivity.class);
+                                           startActivity(i);
+                                    }
+                                }
+                            //    availableStore = new GroceryStore(name_of_store,dataSnapshot.child("Info").child("Address").getValue(String.class),dataSnapshot.child("Info").child("Phone Number").getValue(String.class),dataSnapshot.child("Info").child("Contact Name").getValue(String.class),dataSnapshot.child("Info").child("Contact Email").getValue(String.class),dataSnapshot.child("Info").child("Username").getValue(String.class),dataSnapshot.child("Info").child("Password").getValue(String.class));
+                             // Toast.makeText(Pantry_Search_Screen.this,availableStore.getStoreName(),Toast.LENGTH_SHORT).show();
+
+                            }
+
+                            @Override
+                            public void onCancelled(DatabaseError databaseError) {
+
+                            }
+                        });
+
+             //   Toast.makeText(Pantry_Search_Screen.this,makeRequest.getGroceryStore().getContactEmail(),Toast.LENGTH_SHORT).show();
+
+                   // Toast.makeText(Pantry_Search_Screen.this,"fds",Toast.LENGTH_SHORT).show();
+
+           //   Intent i = new Intent( Pantry_Search_Screen.this, RequestActivity.class);
+             //   startActivity(i);
+
+            }
+        });
+
 
         list_of_stores.addView(itemsinfo);
 
