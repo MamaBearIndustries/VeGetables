@@ -10,28 +10,31 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".AcceptActivity" />
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
         <activity
             android:name=".FoodInfo"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".FoodPantry_Orders"
-            android:exported="true"/>
+            android:exported="true" />
         <activity android:name=".Pantry_Search_Screen" />
         <activity android:name=".CurrentInventory" />
         <activity android:name=".GroceryStoreSignUp" />
         <activity android:name=".Sign_In">
+
+        </activity>
+        <activity android:name=".GroceryStore_Or_FoodPanty" />
+        <activity android:name=".FoodPantrySignUp" />
+        <activity android:name=".RequestActivity" />
+        <activity android:name=".SplashScreen">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".GroceryStore_Or_FoodPanty" />
-        <activity android:name=".FoodPantrySignUp" />
-        <activity android:name=".RequestActivity"></activity>
     </application>
 
 </manifest>

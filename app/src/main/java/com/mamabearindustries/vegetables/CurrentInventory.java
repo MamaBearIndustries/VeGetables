@@ -124,8 +124,5 @@ public class CurrentInventory extends AppCompatActivity {
         list_of_items.addView(itemsinfo);
 
     }
-
-
-
 }
 
