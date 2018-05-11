@@ -59,23 +59,22 @@
         android:layout_height="35dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="480dp"
+        android:layout_marginTop="468dp"
         android:fontFamily="@font/cinzel"
         android:text="Contact Number"
         android:textColor="@android:color/background_dark"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/request_contact_email"
         android:layout_width="575dp"
-        android:layout_height="28dp"
+        android:layout_height="35dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="376dp"
+        android:layout_marginTop="356dp"
         android:fontFamily="@font/cinzel"
         android:text="Contact Email"
         android:textColor="@android:color/background_dark"
@@ -103,12 +102,13 @@
         android:layout_height="60dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="280dp"
         android:fontFamily="@font/cinzel"
         android:textColor="@android:color/background_dark"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/request_address" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/request_contact_email_text"
@@ -129,19 +129,18 @@
         android:layout_height="60dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="512dp"
+        android:layout_marginTop="504dp"
         android:fontFamily="@font/cinzel"
         android:textColor="@android:color/background_dark"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/request_food_name"
         android:layout_width="575dp"
-        android:layout_height="58dp"
+        android:layout_height="35dp"
         android:layout_marginTop="580dp"
         android:fontFamily="@font/cinzel"
         android:text="Food Name"
@@ -156,7 +155,6 @@
         android:layout_height="60dp"
         android:layout_marginEnd="5dp"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="32dp"
         android:fontFamily="@font/cinzel"
         android:textColor="@android:color/background_dark"
         android:textSize="18sp"
@@ -170,7 +168,7 @@
         android:layout_height="35dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="700dp"
+        android:layout_marginTop="696dp"
         android:fontFamily="@font/cinzel"
         android:text="Food Quantity"
         android:textColor="@android:color/background_dark"
@@ -194,15 +192,18 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/request_food_quantity"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.986" />
 
     <Button
         android:id="@+id/makeRequest_button"
-        android:layout_width="205dp"
-        android:layout_height="63dp"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
         android:layout_marginBottom="8dp"
         android:text="Request"
+        android:backgroundTint="?attr/colorAccent"
+        android:fontFamily="@font/cinzel"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
