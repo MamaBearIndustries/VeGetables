@@ -208,7 +208,7 @@ private int counter = 0;
                                     {
                                        // Toast.makeText(Pantry_Search_Screen.this,"Made it",Toast.LENGTH_SHORT).show();
 
-                                        availableStore = new GroceryStore(name_of_store,individualStore.child("Info").child("Address").getValue(String.class),individualStore.child("Info").child("Phone Number").getValue(String.class),individualStore.child("Info").child("Contact Name").getValue(String.class),individualStore.child("Info").child("Contact Email").getValue(String.class),individualStore.child("Info").child("Username").getValue(String.class),individualStore.child("Info").child("Password").getValue(String.class));
+                                        availableStore = new GroceryStore(name_of_store,individualStore.child("Info").child("Address").getValue(String.class),individualStore.child("Info").child("PhoneNumber").getValue(String.class),individualStore.child("Info").child("ContactName").getValue(String.class),individualStore.child("Info").child("ContactEmail").getValue(String.class),individualStore.child("Info").child("Username").getValue(String.class),individualStore.child("Info").child("Password").getValue(String.class));
                                         foodRequested = new Food(name_of_food,Integer.valueOf(amountOfFood));
                                         //Toast.makeText(Pantry_Search_Screen.this,String.valueOf(foodRequested.getQuantity()),Toast.LENGTH_SHORT).show();
 

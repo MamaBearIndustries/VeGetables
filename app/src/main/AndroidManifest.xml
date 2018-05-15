@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/veggies_blank"
+        android:icon="@mipmap/ic_launcher_foreground"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -21,12 +21,17 @@
         <activity android:name=".CurrentInventory" />
         <activity android:name=".GroceryStoreSignUp" />
         <activity android:name=".Sign_In">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity android:name=".GroceryStore_Or_FoodPanty" />
         <activity android:name=".FoodPantrySignUp" />
         <activity android:name=".RequestActivity" />
-        <activity android:name=".SplashScreen">
+        <!--<activity android:name=".SplashScreen">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,6 +40,7 @@
             </intent-filter>
 
         </activity>
+        -->
     </application>
 
 </manifest>
