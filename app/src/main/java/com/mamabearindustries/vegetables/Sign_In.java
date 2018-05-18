@@ -19,11 +19,14 @@ public class Sign_In extends AppCompatActivity {
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     String m_androidId;
 
+    boolean foodPantryUserMatch = false;
+    boolean groceryStoreUserMatch = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign__in);
-       final EditText password = findViewById(R.id.enter_password_intro);
+        final EditText password = findViewById(R.id.enter_password_intro);
         final EditText username = findViewById(R.id.enter_user_name_intro);
         Button sign_up = findViewById(R.id.sign_up);
         Button sign_in = findViewById(R.id.sign_in);
@@ -49,6 +52,8 @@ Make it add to existing
             @Override
             public void onClick(View view) {
 
+
+
                 if(FoodPantrySignUp.myFoodPantry!=null)
                 {
                     FirebaseDatabase.getInstance().getReferenceFromUrl("https://vegetables-1107.firebaseio.com/FoodPantries")
@@ -58,11 +63,14 @@ Make it add to existing
 
                                     for(DataSnapshot pantries : dataSnapshot.getChildren())
                                     {
-                                      if(pantries.child("Info").child("Username").getValue(String.class).equals(username.getText().toString())&&pantries.child("Info").child("Password").getValue(String.class).equals(password.getText().toString()))
+                                      if((pantries.child("Info").child("Username").getValue(String.class)).equals(username.getText().toString())&&pantries.child("Info").child("Password").getValue(String.class).equals(password.getText().toString()))
                                         {
                                             Intent i = new Intent(
                                                     Sign_In.this, Pantry_Search_Screen.class);
+                                            //6Toast.makeText(Sign_In.this,"Sign in button pressed",Toast.LENGTH_LONG).show();
                                             startActivity(i);
+                                            foodPantryUserMatch = true;
+                                            break;
                                         }
                                     }
                                 }
@@ -72,9 +80,9 @@ Make it add to existing
 
                                 }
                             });
-                }
-                else if(GroceryStoreSignUp.myGroceryStore!=null)
-                {
+               }
+               if((GroceryStoreSignUp.myGroceryStore!=null) && (foodPantryUserMatch != true))
+               {
                     FirebaseDatabase.getInstance().getReferenceFromUrl("https://vegetables-1107.firebaseio.com/GroceryStores")
                             .addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
@@ -82,12 +90,14 @@ Make it add to existing
 
                                     for(DataSnapshot stores : dataSnapshot.getChildren())
                                     {
-                                        if(stores.child("Info").child("Username").getValue(String.class).equals(username.getText().toString())&&stores.child("Info").child("Password").getValue(String.class).equals(password.getText().toString()))
+                                        if((stores.child("Info").child("Username").getValue(String.class).equals(username.getText().toString())) && (stores.child("Info").child("Password").getValue(String.class).equals(password.getText().toString())))
                                         {
                                             //Toast.makeText(Sign_In.this,username.getText(),Toast.LENGTH_SHORT).show();
                                             Intent i = new Intent(
                                                     Sign_In.this, CurrentInventory.class);
                                             startActivity(i);
+                                            groceryStoreUserMatch = true;
+                                            break;
                                         }
                                     }
                                 }
@@ -98,14 +108,15 @@ Make it add to existing
                                 }
                             });
 
-                }
-                else
+                    }
+                else if(foodPantryUserMatch == false && groceryStoreUserMatch == false)
                 {
                     Toast.makeText(Sign_In.this,"Please Sign Up for an Account",Toast.LENGTH_LONG).show();
                 }
             }
         });
     }
+
     public String getId()
     {
         try {
@@ -140,6 +151,8 @@ Make it add to existing
         });
 
     }
+
+
     private void checkIfPantryExists()
     {
         final DatabaseReference checkIfExisiting = database.getReference().child("PantryIds").child(getId()).child("Info");

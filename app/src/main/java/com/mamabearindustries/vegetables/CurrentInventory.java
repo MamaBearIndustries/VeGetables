@@ -1,6 +1,7 @@
 package com.mamabearindustries.vegetables;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,10 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import org.w3c.dom.Text;
+
+import static java.security.AccessController.getContext;
 
 public class CurrentInventory extends AppCompatActivity {
 
@@ -91,35 +96,35 @@ public class CurrentInventory extends AppCompatActivity {
         TextView itemname = new TextView(this);
         itemname.setText("Item Name:");
         itemname.setMinWidth(100);
-        itemname.setTextSize(18);
-        //itemname.setTypeface(cinzel);
-        itemname.setPadding(40,0,150,0);
+        itemname.setTextSize(24);
+        itemname.setPadding(30,0,10,0);
         itemsinfo.addView(itemname);
 
         TextView name_of_item = new TextView(this);
         name_of_item.setText(itemName);
         name_of_item.setMinWidth(100);
-        name_of_item.setTextSize(18);
+        name_of_item.setTextSize(24);
         //name_of_item.setTypeface(cinzel);
-        name_of_item.setPadding(40,0,150,0);
+        name_of_item.setPadding(0,0,20,0);
         itemsinfo.addView(name_of_item);
 
         TextView itemquantity = new TextView(this);
         itemquantity.setText("Item Quantity:");
         itemquantity.setMinWidth(100);
-        itemquantity.setTextSize(18);
+        itemquantity.setTextSize(24);
         //itemquantity.setTypeface(cinzel);
-        itemquantity.setPadding(150,0,40,0);
+        itemquantity.setPadding(150,0,0,0);
         itemsinfo.addView(itemquantity);
 
         TextView quantity_of_item = new TextView(this);
         quantity_of_item.setText(itemQuantity);
         quantity_of_item.setMinWidth(100);
         //quantity_of_item.setTypeface(cinzel);
-        quantity_of_item.setTextSize(18);
+        quantity_of_item.setTextSize(24);
         itemsinfo.addView(quantity_of_item);
+        quantity_of_item.setPadding(0,0,20,0);
 
-        itemsinfo.setPadding(150,40,0,20);
+        itemsinfo.setPadding(0,0,20,0);
 
         list_of_items.addView(itemsinfo);
 

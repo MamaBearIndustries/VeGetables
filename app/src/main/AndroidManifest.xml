@@ -31,7 +31,7 @@
         <activity android:name=".GroceryStore_Or_FoodPanty" />
         <activity android:name=".FoodPantrySignUp" />
         <activity android:name=".RequestActivity" />
-        <!--<activity android:name=".SplashScreen">
+        <activity android:name=".SplashScreen">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,7 +40,7 @@
             </intent-filter>
 
         </activity>
-        -->
+
     </application>
 
 </manifest>
