@@ -15,7 +15,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+
 public class Sign_In extends AppCompatActivity {
+    //Food Pantry Sign In
+
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     String m_androidId;
 
@@ -54,7 +57,7 @@ Make it add to existing
 
 
 
-                if(FoodPantrySignUp.myFoodPantry!=null)
+                if((FoodPantrySignUp.myFoodPantry!=null))
                 {
                     FirebaseDatabase.getInstance().getReferenceFromUrl("https://vegetables-1107.firebaseio.com/FoodPantries")
                             .addListenerForSingleValueEvent(new ValueEventListener() {

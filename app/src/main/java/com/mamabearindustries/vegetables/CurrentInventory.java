@@ -20,7 +20,6 @@ import org.w3c.dom.Text;
 import static java.security.AccessController.getContext;
 
 public class CurrentInventory extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
